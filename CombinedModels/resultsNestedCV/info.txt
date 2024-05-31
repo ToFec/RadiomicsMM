@@ -1,0 +1,1369 @@
+./CombinedModels/resultsNestedCV/
+mean tesetaccuracy: 0.611643734086032 +/- 0.124438458130785
+0.8205499276411, 0.604779411764706, 0.691247002398082, 0.55829596412556, 0.476401179941003, 0.76278118609407, 0.589285714285714, 0.794029850746269, 0.482815057283142, 0.642694928084784, 0.566713483146067, 0.614765100671141, 0.600149476831091, 0.843177189409369, 0.693396226415094, 0.595628415300546, 0.676433121019108, 0.669902912621359, 0.495934959349594, 0.329113924050633, 0.469879518072289, 0.43646408839779, 0.706235011990408, 0.862199747155499, 0.553370786516854, 0.548029556650246, 0.536644951140065, 0.599326599326599, 0.559414990859232, 0.569651741293532
+############################
+############################
+############################
+Fold 1 eventRatio in train set 0.137529137529138
+Fold 1 eventRatio in test set 0.147727272727273
+Ids with event in test set:  A03, A03, A03, A03, A13, A13, Z43, Z43, Z50, K68, K68, K68, M08
+Model Fold 1
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 429, number of events= 59 
+
+                                                        coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation                  -0.6142    0.5411   0.1543
+gender1                                              -0.6995    0.4968   0.2623
+Margin_wavelet.HHL_glrlm_LongRunLowGrayLevelEmphasis -0.3376    0.7134   0.1648
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis      -0.4027    0.6685   0.1423
+                                                          z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation                  -3.981 6.86e-05 ***
+gender1                                              -2.667  0.00765 ** 
+Margin_wavelet.HHL_glrlm_LongRunLowGrayLevelEmphasis -2.049  0.04049 *  
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis      -2.831  0.00464 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                     exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                     0.5411      1.848
+gender1                                                 0.4968      2.013
+Margin_wavelet.HHL_glrlm_LongRunLowGrayLevelEmphasis    0.7134      1.402
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis         0.6685      1.496
+                                                     lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                     0.3999    0.7321
+gender1                                                 0.2972    0.8307
+Margin_wavelet.HHL_glrlm_LongRunLowGrayLevelEmphasis    0.5165    0.9855
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis         0.5058    0.8835
+
+Concordance= 0.74  (se = 0.032 )
+Likelihood ratio test= 37.72  on 4 df,   p=1e-07
+Wald test            = 32.76  on 4 df,   p=1e-06
+Score (logrank) test = 34.48  on 4 df,   p=6e-07
+
+Train accuracy: 0.740225982706488
+Test accuracy: 0.8205499276411
+Train accuracy inner loops: 0.750754327457519, 0.747085011659953, 0.749609113245477, 0.758366893487016, 0.737823569482289, 0.726513409961686, 0.728250628140704, 0.743356112376613, 0.774612559347846, 0.684442050453362, 0.705040262451536, 0.748099970768781, 0.75651518414818, 0.704218159534266, 0.728921819110884, 0.724841190237379, 0.747700500242053, 0.788265090755593, 0.791813312930375, 0.735481535119479, 0.727523014712209, 0.696385793146547, 0.690750932007811, 0.759454855195911, 0.758226456577501, 0.75559608688443, 0.734131274131274, 0.725386052916298, 0.732426127527216, 0.739641867086237
+Test accuracy inner loops: 0.696335078534031, 0.667567567567568, 0.71002132196162, 0.71003717472119, 0.755787037037037, 0.634831460674157, 0.784210526315789, 0.708333333333333, 0.769070010449321, 0.888329979879276, 0.765400843881856, 0.711111111111111, 0.646721833227244, 0.735174654752234, 0.746089049338147, 0.857496902106567, 0.694845360824742, 0.544179523141655, 0.502857142857143, 0.766937669376694, 0.777061855670103, 0.818663136995367, 0.859124866595518, 0.661229611041405, 0.692934782608696, 0.635696821515892, 0.737240075614367, 0.75, 0.928057553956835, 0.647177419354839
+############################
+############################
+############################
+Fold 2 eventRatio in train set 0.144859813084112
+Fold 2 eventRatio in test set 0.112359550561798
+Ids with event in test set:  A02, Z42, Z42, Z43, Z43, Z47, M08, M13, M13, M13
+Model Fold 2
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 428, number of events= 62 
+
+                                       coef exp(coef) se(coef)      z Pr(>|z|)
+Margin_wavelet.LLH_glcm_Correlation -0.7529    0.4710   0.1534 -4.909 9.17e-07
+Margin_wavelet.HLL_glcm_Contrast    -0.7895    0.4541   0.1844 -4.281 1.86e-05
+kps                                 -0.4233    0.6549   0.1226 -3.452 0.000557
+gender1                             -0.7550    0.4700   0.2712 -2.784 0.005368
+                                       
+Margin_wavelet.LLH_glcm_Correlation ***
+Margin_wavelet.HLL_glcm_Contrast    ***
+kps                                 ***
+gender1                             ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                    exp(coef) exp(-coef) lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation    0.4710      2.123    0.3487    0.6362
+Margin_wavelet.HLL_glcm_Contrast       0.4541      2.202    0.3163    0.6518
+kps                                    0.6549      1.527    0.5150    0.8328
+gender1                                0.4700      2.128    0.2762    0.7997
+
+Concordance= 0.784  (se = 0.032 )
+Likelihood ratio test= 69.71  on 4 df,   p=3e-14
+Wald test            = 62.1  on 4 df,   p=1e-12
+Score (logrank) test = 65.05  on 4 df,   p=3e-13
+
+Train accuracy: 0.783586688578472
+Test accuracy: 0.604779411764706
+Train accuracy inner loops: 0.767517771652401, 0.819979947133352, 0.82269221594975, 0.764863828154967, 0.828371860967903, 0.823911996145817, 0.824171316048572, 0.80619971604354, 0.754591539931854, 0.763121546961326, 0.802058590657166, 0.74595736861448, 0.827250432775534, 0.809320557491289, 0.838386455903948, 0.787358369557472, 0.781733633655453, 0.784362080220498, 0.789742399628684, 0.737156406428383, 0.750455373406193, 0.794574560365902, 0.775419401896426, 0.734330542232339, 0.754249815225425, 0.822648387352405, 0.774414132060688, 0.737433574353167, 0.784748373844574, 0.781129886141127
+Test accuracy inner loops: 0.861111111111111, 0.648936170212766, 0.591087811271298, 0.876460767946578, 0.630662020905923, 0.65398773006135, 0.676709154113557, 0.630467571644042, 0.90950744558992, 0.881481481481482, 0.632142857142857, 0.877488514548239, 0.55863539445629, 0.649033570701933, 0.631419939577039, 0.733333333333333, 0.803607214428858, 0.768691588785047, 0.736263736263736, 0.883218842001963, 0.858108108108108, 0.686730506155951, 0.763990267639903, 0.936657681940701, 0.922014622258327, 0.632621951219512, 0.835329341317365, 0.917115177610334, 0.769491525423729, 0.827515400410678
+############################
+############################
+############################
+Fold 3 eventRatio in train set 0.141752577319588
+Fold 3 eventRatio in test set 0.131782945736434
+Ids with event in test set:  A06, A06, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z38, Z42, Z42, Z47, K60, K60
+Model Fold 3
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 388, number of events= 55 
+
+                                                                coef exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                          -0.5522    0.5757
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis -0.3952    0.6735
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis         -0.7997    0.4495
+wavelet.LHH_firstorder_Skewness                               0.3065    1.3587
+                                                             se(coef)      z
+Margin_wavelet.LLH_glcm_Correlation                            0.1515 -3.645
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis   0.1846 -2.141
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis           0.2746 -2.912
+wavelet.LHH_firstorder_Skewness                                0.1077  2.845
+                                                             Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation                          0.000268 ***
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis 0.032272 *  
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis         0.003586 ** 
+wavelet.LHH_firstorder_Skewness                              0.004438 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                             exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                             0.5757
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis    0.6735
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis            0.4495
+wavelet.LHH_firstorder_Skewness                                 1.3587
+                                                             exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                               1.737
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis      1.485
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis              2.225
+wavelet.LHH_firstorder_Skewness                                   0.736
+                                                             lower .95
+Margin_wavelet.LLH_glcm_Correlation                             0.4278
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis    0.4691
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis            0.2624
+wavelet.LHH_firstorder_Skewness                                 1.1001
+                                                             upper .95
+Margin_wavelet.LLH_glcm_Correlation                             0.7747
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis    0.9671
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis            0.7699
+wavelet.LHH_firstorder_Skewness                                 1.6781
+
+Concordance= 0.745  (se = 0.032 )
+Likelihood ratio test= 42.04  on 4 df,   p=2e-08
+Wald test            = 36.59  on 4 df,   p=2e-07
+Score (logrank) test = 35.42  on 4 df,   p=4e-07
+
+Train accuracy: 0.745270360928485
+Test accuracy: 0.691247002398082
+Train accuracy inner loops: 0.744767970882621, 0.769352624353152, 0.74950884086444, 0.757578914470257, 0.74632892804699, 0.742341083724179, 0.770853400115585, 0.771461318051576, 0.742979914060158, 0.744595579305319, 0.740795442557232, 0.769238757918787, 0.733976176971072, 0.740295926210607, 0.743703853545059, 0.775887757635957, 0.757925583873546, 0.750566193123327, 0.773419203747073, 0.743160795119071, 0.725698543880362, 0.74070182811515, 0.758636109558413, 0.738705850141462, 0.736343157499531, 0.735462648556876, 0.745491388044579, 0.739738304355619, 0.747010119595216, 0.723954802259887
+Test accuracy inner loops: 0.68974358974359, 0.679748822605965, 0.655813953488372, 0.681564245810056, 0.70383275261324, 0.762183235867446, 0.496402877697842, 0.668373879641485, 0.760956175298805, 0.753036437246964, 0.722027972027972, 0.64336917562724, 0.834666666666667, 0.7775, 0.677018633540373, 0.696881091617934, 0.669260700389105, 0.689655172413793, 0.740786240786241, 0.739325842696629, 0.857908847184987, 0.809694793536804, 0.713709677419355, 0.869402985074627, 0.900928792569659, 0.83248730964467, 0.754940711462451, 0.764940239043825, 0.731543624161074, 0.766200762388818
+############################
+############################
+############################
+Fold 4 eventRatio in train set 0.156962025316456
+Fold 4 eventRatio in test set 0.0819672131147541
+Ids with event in test set:  A13, A13, Z39, Z39, Z42, Z42, Z47, K17, K60, K60
+Model Fold 4
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 395, number of events= 62 
+
+                                                         coef exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                   -0.7980    0.4502
+wavelet.LHH_gldm_SmallDependenceHighGrayLevelEmphasis -0.5744    0.5630
+kps                                                   -0.5355    0.5854
+wavelet.HHH_firstorder_Mean                           -0.2759    0.7589
+                                                      se(coef)      z Pr(>|z|)
+Margin_wavelet.LLH_glcm_Correlation                     0.1355 -5.891 3.84e-09
+wavelet.LHH_gldm_SmallDependenceHighGrayLevelEmphasis   0.1547 -3.713 0.000205
+kps                                                     0.1328 -4.032 5.53e-05
+wavelet.HHH_firstorder_Mean                             0.1062 -2.598 0.009373
+                                                         
+Margin_wavelet.LLH_glcm_Correlation                   ***
+wavelet.LHH_gldm_SmallDependenceHighGrayLevelEmphasis ***
+kps                                                   ***
+wavelet.HHH_firstorder_Mean                           ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                      exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                      0.4502      2.221
+wavelet.LHH_gldm_SmallDependenceHighGrayLevelEmphasis    0.5630      1.776
+kps                                                      0.5854      1.708
+wavelet.HHH_firstorder_Mean                              0.7589      1.318
+                                                      lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                      0.3452    0.5871
+wavelet.LHH_gldm_SmallDependenceHighGrayLevelEmphasis    0.4158    0.7625
+kps                                                      0.4512    0.7594
+wavelet.HHH_firstorder_Mean                              0.6163    0.9345
+
+Concordance= 0.773  (se = 0.031 )
+Likelihood ratio test= 65.02  on 4 df,   p=3e-13
+Wald test            = 68.83  on 4 df,   p=4e-14
+Score (logrank) test = 66.08  on 4 df,   p=2e-13
+
+Train accuracy: 0.772857634507285
+Test accuracy: 0.55829596412556
+Train accuracy inner loops: 0.763507306889353, 0.811525129982669, 0.77193141612991, 0.801725541266482, 0.770127706829539, 0.771493952271984, 0.732656844570202, 0.76385597431389, 0.727790652761684, 0.773927922147364, 0.727075139722625, 0.743172413793104, 0.764761678918663, 0.753996229199115, 0.786572802197802, 0.822688190910686, 0.778598684744662, 0.767834080376814, 0.765194532071504, 0.774036045092267, 0.759900278070764, 0.807640054343483, 0.771453044697088, 0.785025524673851, 0.793526374031723, 0.757352338821987, 0.752228309755499, 0.746581000458926, 0.812771712877983, 0.771641407654765
+Test accuracy inner loops: 0.879895561357702, 0.644194756554307, 0.724702380952381, 0.553240740740741, 0.760526315789474, 0.728383458646617, 0.906152241918665, 0.857142857142857, 0.794294294294294, 0.768437747819191, 0.839473684210526, 0.833333333333333, 0.843243243243243, 0.875, 0.754884547069272, 0.607371794871795, 0.746236559139785, 0.806666666666667, 0.750227066303361, 0.820224719101124, 0.809151785714286, 0.605263157894737, 0.737142857142857, 0.699524940617577, 0.707317073170732, 0.831295843520782, 0.904231625835189, 0.838755304101839, 0.631057268722467, 0.756013745704467
+############################
+############################
+############################
+Fold 5 eventRatio in train set 0.125
+Fold 5 eventRatio in test set 0.231884057971014
+Ids with event in test set:  A03, A03, A03, A03, A05, A05, A23, A23, Z38, Z43, Z43, M03, M03, M03, M03, M03
+Model Fold 5
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 448, number of events= 56 
+
+                                          coef exp(coef) se(coef)      z
+original_glcm_SumSquares               -0.7292    0.4823   0.1621 -4.499
+Margin_wavelet.LLH_glcm_Correlation    -0.5956    0.5512   0.1378 -4.322
+Margin_wavelet.HLH_firstorder_Skewness -0.3889    0.6778   0.1596 -2.437
+                                       Pr(>|z|)    
+original_glcm_SumSquares               6.81e-06 ***
+Margin_wavelet.LLH_glcm_Correlation    1.55e-05 ***
+Margin_wavelet.HLH_firstorder_Skewness   0.0148 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                       exp(coef) exp(-coef) lower .95 upper .95
+original_glcm_SumSquares                  0.4823      2.073    0.3510    0.6626
+Margin_wavelet.LLH_glcm_Correlation       0.5512      1.814    0.4208    0.7222
+Margin_wavelet.HLH_firstorder_Skewness    0.6778      1.475    0.4958    0.9268
+
+Concordance= 0.771  (se = 0.028 )
+Likelihood ratio test= 45.45  on 3 df,   p=7e-10
+Wald test            = 39.64  on 3 df,   p=1e-08
+Score (logrank) test = 43.38  on 3 df,   p=2e-09
+
+Train accuracy: 0.771094811192611
+Test accuracy: 0.476401179941003
+Train accuracy inner loops: 0.809655172413793, 0.773041371264471, 0.737996923326046, 0.769632691257896, 0.773109243697479, 0.757471432757105, 0.77370297606054, 0.738198250168253, 0.794307679725198, 0.759690534459619, 0.763194730341704, 0.754132562991494, 0.76701786532295, 0.784400182454006, 0.752997059488803, 0.772512633584624, 0.780402512132458, 0.77751274880737, 0.803319709733923, 0.792209017166572, 0.755821753713464, 0.770113805047006, 0.768296658516707, 0.762908688739891, 0.772878813135523, 0.747014774337179, 0.772108843537415, 0.770745531172795, 0.812222948913596, 0.763600878262991
+Test accuracy inner loops: 0.509049773755656, 0.741299303944316, 0.813953488372093, 0.80379746835443, 0.765834932821497, 0.845272206303725, 0.726415094339623, 0.782887700534759, 0.672025723472669, 0.826171875, 0.854122621564482, 0.813838550247117, 0.804727646454265, 0.7152466367713, 0.907894736842105, 0.749271137026239, 0.633451957295374, 0.792093704245974, 0.667130919220056, 0.714691943127962, 0.758126195028681, 0.763468013468013, 0.794453507340946, 0.828947368421053, 0.743185078909613, 0.803088803088803, 0.778280542986425, 0.715568862275449, 0.43943661971831, 0.840677966101695
+############################
+############################
+############################
+Fold 6 eventRatio in train set 0.147540983606557
+Fold 6 eventRatio in test set 0.1
+Ids with event in test set:  A02, A03, A03, A03, A03, Z38, K17, K70, M11
+Model Fold 6
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 427, number of events= 63 
+
+                                                         coef exp(coef)
+wavelet.LLH_glcm_Correlation                          -0.3567    0.7000
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis -0.4216    0.6560
+sysWaehrend11                                          1.0549    2.8716
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis            -0.3336    0.7163
+                                                      se(coef)      z Pr(>|z|)
+wavelet.LLH_glcm_Correlation                            0.1280 -2.786  0.00534
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis   0.1725 -2.444  0.01451
+sysWaehrend11                                           0.2727  3.868  0.00011
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis              0.1120 -2.979  0.00289
+                                                         
+wavelet.LLH_glcm_Correlation                          ** 
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis *  
+sysWaehrend11                                         ***
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis            ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                      exp(coef) exp(-coef)
+wavelet.LLH_glcm_Correlation                             0.7000     1.4286
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis    0.6560     1.5245
+sysWaehrend11                                            2.8716     0.3482
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis               0.7163     1.3960
+                                                      lower .95 upper .95
+wavelet.LLH_glcm_Correlation                             0.5446    0.8997
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis    0.4678    0.9198
+sysWaehrend11                                            1.6827    4.9005
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis               0.5752    0.8921
+
+Concordance= 0.73  (se = 0.029 )
+Likelihood ratio test= 40.53  on 4 df,   p=3e-08
+Wald test            = 41.05  on 4 df,   p=3e-08
+Score (logrank) test = 42.78  on 4 df,   p=1e-08
+
+Train accuracy: 0.730331969076853
+Test accuracy: 0.76278118609407
+Train accuracy inner loops: 0.740804876359354, 0.741280183978536, 0.721932976461098, 0.749412389112139, 0.728625272763341, 0.771876580677795, 0.708347329526369, 0.747550925206033, 0.732973297329733, 0.720213109460768, 0.723791021994033, 0.718355257426605, 0.713437057991513, 0.736295627499033, 0.729383506805444, 0.709129679355552, 0.70255756803495, 0.735625043142127, 0.709301499324948, 0.713190401817407, 0.728568477587275, 0.717158076374822, 0.75, 0.761360216671682, 0.709963484611372, 0.714428089543085, 0.724629773967264, 0.725927469779075, 0.718245307725884, 0.732261043558565
+Test accuracy inner loops: 0.711217183770883, 0.679029957203994, 0.832422586520947, 0.642628205128205, 0.769230769230769, 0.558016877637131, 0.778021978021978, 0.570610687022901, 0.712543554006969, 0.798694232861806, 0.70958904109589, 0.75891181988743, 0.773455377574371, 0.770992366412214, 0.785198555956679, 0.82122905027933, 0.821011673151751, 0.687979539641944, 0.827368421052632, 0.832627118644068, 0.70952380952381, 0.842266462480858, 0.592741935483871, 0.532724505327245, 0.825806451612903, 0.755834829443447, 0.672794117647059, 0.757990867579909, 0.744721689059501, 0.729805013927577
+############################
+############################
+############################
+Fold 7 eventRatio in train set 0.132286995515695
+Fold 7 eventRatio in test set 0.183098591549296
+Ids with event in test set:  A13, A13, A14, A14, Z39, Z39, K46, K70, M03, M03, M03, M03, M03
+Model Fold 7
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 446, number of events= 59 
+
+                                                            coef exp(coef)
+wavelet.LLH_glcm_ClusterTendency                         -0.5237    0.5924
+Margin_wavelet.LLH_glcm_Correlation                      -0.6252    0.5351
+Margin_original_glcm_SumSquares                          -0.7462    0.4742
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized -0.2395    0.7870
+                                                         se(coef)      z
+wavelet.LLH_glcm_ClusterTendency                           0.1954 -2.680
+Margin_wavelet.LLH_glcm_Correlation                        0.1572 -3.977
+Margin_original_glcm_SumSquares                            0.2874 -2.596
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized   0.1176 -2.036
+                                                         Pr(>|z|)    
+wavelet.LLH_glcm_ClusterTendency                          0.00736 ** 
+Margin_wavelet.LLH_glcm_Correlation                      6.98e-05 ***
+Margin_original_glcm_SumSquares                           0.00942 ** 
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized  0.04175 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                         exp(coef) exp(-coef)
+wavelet.LLH_glcm_ClusterTendency                            0.5924      1.688
+Margin_wavelet.LLH_glcm_Correlation                         0.5351      1.869
+Margin_original_glcm_SumSquares                             0.4742      2.109
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.7870      1.271
+                                                         lower .95 upper .95
+wavelet.LLH_glcm_ClusterTendency                            0.4039    0.8688
+Margin_wavelet.LLH_glcm_Correlation                         0.3932    0.7282
+Margin_original_glcm_SumSquares                             0.2699    0.8328
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.6250    0.9911
+
+Concordance= 0.758  (se = 0.03 )
+Likelihood ratio test= 56.82  on 4 df,   p=1e-11
+Wald test            = 44.41  on 4 df,   p=5e-09
+Score (logrank) test = 46.09  on 4 df,   p=2e-09
+
+Train accuracy: 0.757715877437326
+Test accuracy: 0.589285714285714
+Train accuracy inner loops: 0.738442165857168, 0.791324155689809, 0.747308184624652, 0.734913444426468, 0.767773657907464, 0.773019493985898, 0.746992750736876, 0.773632680621202, 0.747557726465364, 0.74593648412103, 0.770060957329869, 0.787020408163265, 0.762699264888081, 0.741515884265822, 0.767097637093179, 0.74403172908245, 0.785532994923858, 0.756314478833156, 0.755282630254024, 0.789787234042553, 0.773577701412753, 0.745883753223567, 0.738878143133462, 0.761543566891059, 0.778568786982249, 0.757178333074655, 0.770939755128517, 0.751465944970681, 0.791340636411059, 0.750377373480575
+Test accuracy inner loops: 0.873799725651577, 0.620842572062084, 0.867069486404834, 0.83698296836983, 0.72113676731794, 0.687029288702929, 0.839175257731959, 0.691399662731872, 0.899665551839465, 0.819343065693431, 0.66965085049239, 0.62015503875969, 0.713523131672598, 0.848958333333333, 0.744270205066345, 0.897097625329815, 0.541528239202658, 0.764341085271318, 0.702185792349727, 0.732409381663113, 0.656160458452722, 0.786751361161524, 0.932203389830508, 0.7, 0.665934065934066, 0.755555555555556, 0.646341463414634, 0.780150753768844, 0.69340746624305, 0.833679833679834
+############################
+############################
+############################
+Fold 8 eventRatio in train set 0.154411764705882
+Fold 8 eventRatio in test set 0.0825688073394495
+Ids with event in test set:  A13, A13, A14, A14, Z37, Z43, Z43, K17, K19
+Model Fold 8
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 408, number of events= 63 
+
+                                              coef exp(coef) se(coef)      z
+Margin_wavelet.LLH_glcm_ClusterProminence  -0.6074    0.5448   0.1893 -3.208
+wavelet.LLH_firstorder_Skewness            -0.3274    0.7208   0.1189 -2.753
+gender1                                    -0.8312    0.4355   0.2537 -3.276
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis  0.4129    1.5112   0.1395  2.961
+                                           Pr(>|z|)   
+Margin_wavelet.LLH_glcm_ClusterProminence   0.00134 **
+wavelet.LLH_firstorder_Skewness             0.00590 **
+gender1                                     0.00105 **
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis  0.00307 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                           exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_ClusterProminence     0.5448     1.8357    0.3759
+wavelet.LLH_firstorder_Skewness               0.7208     1.3874    0.5709
+gender1                                       0.4355     2.2961    0.2649
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis    1.5112     0.6617    1.1498
+                                           upper .95
+Margin_wavelet.LLH_glcm_ClusterProminence     0.7895
+wavelet.LLH_firstorder_Skewness               0.9100
+gender1                                       0.7161
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis    1.9863
+
+Concordance= 0.742  (se = 0.034 )
+Likelihood ratio test= 41.92  on 4 df,   p=2e-08
+Wald test            = 39.15  on 4 df,   p=6e-08
+Score (logrank) test = 38.86  on 4 df,   p=7e-08
+
+Train accuracy: 0.742452478568766
+Test accuracy: 0.794029850746269
+Train accuracy inner loops: 0.736007962636858, 0.703743403693931, 0.722929936305732, 0.763840170809822, 0.763538786794601, 0.718121968121968, 0.746850452052764, 0.71876584953508, 0.748729570113995, 0.734205149162239, 0.7306918433679, 0.754134587966923, 0.790644609241301, 0.707334132693845, 0.732396870554765, 0.764421321650237, 0.776491397330761, 0.779048046028544, 0.70432609445019, 0.706525783168391, 0.740691489361702, 0.720977011494253, 0.722942998242237, 0.734393927158201, 0.724905660377358, 0.785513854787794, 0.739955097932957, 0.712624200878071, 0.692458855318104, 0.737161631312049
+Test accuracy inner loops: 0.797665369649806, 0.886535552193646, 0.710169491525424, 0.636542239685658, 0.642533936651584, 0.774193548387097, 0.723112128146453, 0.786842105263158, 0.62396694214876, 0.727272727272727, 0.7325, 0.730650154798762, 0.518248175182482, 0.81376215407629, 0.804695837780149, 0.684957426679281, 0.596774193548387, 0.563084112149533, 0.884353741496599, 0.909574468085106, 0.678615574783684, 0.841095890410959, 0.75201072386059, 0.701754385964912, 0.833333333333333, 0.562300319488818, 0.730314960629921, 0.850806451612903, 0.901384083044983, 0.828651685393258
+############################
+############################
+############################
+Fold 9 eventRatio in train set 0.150851581508516
+Fold 9 eventRatio in test set 0.0943396226415094
+Ids with event in test set:  Z42, Z42, Z43, Z43, Z47, K19, K68, K68, K68, K70
+Model Fold 9
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 411, number of events= 62 
+
+                                              coef exp(coef) se(coef)      z
+Margin_original_firstorder_Median          -0.3444    0.7087   0.1233 -2.793
+sysVor11                                    1.1621    3.1967   0.2552  4.554
+Margin_original_glcm_Idmn                   0.6748    1.9636   0.1615  4.179
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis  0.4921    1.6357   0.1610  3.056
+                                           Pr(>|z|)    
+Margin_original_firstorder_Median           0.00522 ** 
+sysVor11                                   5.27e-06 ***
+Margin_original_glcm_Idmn                  2.93e-05 ***
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis  0.00224 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                           exp(coef) exp(-coef) lower .95
+Margin_original_firstorder_Median             0.7087     1.4111    0.5565
+sysVor11                                      3.1967     0.3128    1.9386
+Margin_original_glcm_Idmn                     1.9636     0.5093    1.4309
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis    1.6357     0.6114    1.1931
+                                           upper .95
+Margin_original_firstorder_Median             0.9024
+sysVor11                                      5.2712
+Margin_original_glcm_Idmn                     2.6945
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis    2.2425
+
+Concordance= 0.744  (se = 0.034 )
+Likelihood ratio test= 54.93  on 4 df,   p=3e-11
+Wald test            = 53.24  on 4 df,   p=8e-11
+Score (logrank) test = 58.23  on 4 df,   p=7e-12
+
+Train accuracy: 0.743908316821078
+Test accuracy: 0.482815057283142
+Train accuracy inner loops: 0.765349223110575, 0.770627746911021, 0.742198751800288, 0.732614555256065, 0.736246992782678, 0.695511087074094, 0.735450563204005, 0.693246031034173, 0.739763997782529, 0.731811588670891, 0.758859185576624, 0.758767592240396, 0.724091198979592, 0.74542958306236, 0.75660091047041, 0.725171960738852, 0.732482616336823, 0.767765826132957, 0.763498674744415, 0.772516248839369, 0.733822099199521, 0.750340931229301, 0.733582999477443, 0.768788083953961, 0.728230052652896, 0.713009995084385, 0.729611089718906, 0.750393576826196, 0.750564844103027, 0.784882740003374
+Test accuracy inner loops: 0.636986301369863, 0.63728323699422, 0.773913043478261, 0.699564586357039, 0.723440134907251, 0.824242424242424, 0.801310043668122, 0.884165781083953, 0.777777777777778, 0.852112676056338, 0.677477477477477, 0.696551724137931, 0.860095389507154, 0.765536723163842, 0.659751037344398, 0.854700854700855, 0.87152034261242, 0.683602771362587, 0.606986899563319, 0.621523579201935, 0.840686274509804, 0.7116953762466, 0.770240700218818, 0.627700127064803, 0.786078098471986, 0.874213836477987, 0.917525773195876, 0.716606498194946, 0.723180076628352, 0.621004566210046
+############################
+############################
+############################
+Fold 10 eventRatio in train set 0.133495145631068
+Fold 10 eventRatio in test set 0.161904761904762
+Ids with event in test set:  A14, A14, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z42, Z42, Z46, Z46, Z47, K46
+Model Fold 10
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 390, number of events= 50 
+   (22 observations deleted due to missingness)
+
+                                              coef exp(coef) se(coef)      z
+Max.Gy.                                    -0.5616    0.5703   0.1745 -3.219
+Margin_wavelet.HLL_glcm_DifferenceVariance -0.7407    0.4768   0.1922 -3.853
+gender1                                    -1.1674    0.3112   0.2940 -3.971
+Margin_wavelet.HHH_firstorder_Skewness      0.2735    1.3145   0.1106  2.472
+                                           Pr(>|z|)    
+Max.Gy.                                    0.001288 ** 
+Margin_wavelet.HLL_glcm_DifferenceVariance 0.000117 ***
+gender1                                    7.15e-05 ***
+Margin_wavelet.HHH_firstorder_Skewness     0.013435 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                           exp(coef) exp(-coef) lower .95
+Max.Gy.                                       0.5703     1.7535    0.4051
+Margin_wavelet.HLL_glcm_DifferenceVariance    0.4768     2.0974    0.3271
+gender1                                       0.3112     3.2138    0.1749
+Margin_wavelet.HHH_firstorder_Skewness        1.3145     0.7607    1.0583
+                                           upper .95
+Max.Gy.                                       0.8028
+Margin_wavelet.HLL_glcm_DifferenceVariance    0.6949
+gender1                                       0.5536
+Margin_wavelet.HHH_firstorder_Skewness        1.6328
+
+Concordance= 0.777  (se = 0.036 )
+Likelihood ratio test= 48.85  on 4 df,   p=6e-10
+Wald test            = 46.35  on 4 df,   p=2e-09
+Score (logrank) test = 47.63  on 4 df,   p=1e-09
+
+Train accuracy: 0.777205408886027
+Test accuracy: 0.642694928084784
+Train accuracy inner loops: 0.772009256464433, 0.726127747076211, 0.771437448218724, 0.781375330137924, 0.742903269204897, 0.780243378668576, 0.825353925353925, 0.744950010202, 0.751801523574223, 0.779345310261215, 0.779580605370529, 0.772215843857635, 0.756482255944557, 0.755766192733017, 0.693777498428661, 0.77264346623646, 0.76638119896435, 0.77001404494382, 0.778796811879026, 0.787774594078319, 0.808759954493743, 0.771633793182077, 0.787191582002903, 0.824059682934411, 0.747095318668923, 0.74861600402617, 0.752323874755382, 0.77058432934927, 0.770996803254868, 0.773277661795407
+Test accuracy inner loops: 0.836619718309859, 0.861148197596796, 0.826633165829146, 0.75, 0.819487179487179, 0.81055900621118, 0.640041493775934, 0.901369863013699, 0.937662337662338, 0.742914979757085, 0.715909090909091, 0.757894736842105, 0.771137026239067, 0.894484412470024, 0.934195064629847, 0.776, 0.874551971326165, 0.82475884244373, 0.711382113821138, 0.711934156378601, 0.640127388535032, 0.804020100502512, 0.668711656441718, 0.565104166666667, 0.86527514231499, 0.74822695035461, 0.849734042553192, 0.827788649706458, 0.811074918566775, 0.685990338164251
+############################
+############################
+############################
+Fold 11 eventRatio in train set 0.130750605326877
+Fold 11 eventRatio in test set 0.173076923076923
+Ids with event in test set:  A14, A14, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z36, Z36, Z36, Z36, K17, K46, M11
+Model Fold 11
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 381, number of events= 48 
+   (32 observations deleted due to missingness)
+
+                                                            coef exp(coef)
+D2..Gy.                                                  -0.6255    0.5350
+sysVor11                                                  1.3365    3.8058
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized -0.4285    0.6515
+wavelet.LHH_firstorder_Skewness                           0.3423    1.4081
+                                                         se(coef)      z
+D2..Gy.                                                    0.1931 -3.239
+sysVor11                                                   0.3202  4.174
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized   0.1495 -2.866
+wavelet.LHH_firstorder_Skewness                            0.1238  2.765
+                                                         Pr(>|z|)    
+D2..Gy.                                                   0.00120 ** 
+sysVor11                                                 2.99e-05 ***
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized  0.00416 ** 
+wavelet.LHH_firstorder_Skewness                           0.00569 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                         exp(coef) exp(-coef)
+D2..Gy.                                                     0.5350     1.8692
+sysVor11                                                    3.8058     0.2628
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.6515     1.5350
+wavelet.LHH_firstorder_Skewness                             1.4081     0.7102
+                                                         lower .95 upper .95
+D2..Gy.                                                     0.3664    0.7811
+sysVor11                                                    2.0319    7.1283
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.4860    0.8733
+wavelet.LHH_firstorder_Skewness                             1.1048    1.7947
+
+Concordance= 0.789  (se = 0.03 )
+Likelihood ratio test= 47.98  on 4 df,   p=1e-09
+Wald test            = 53.3  on 4 df,   p=7e-11
+Score (logrank) test = 52.36  on 4 df,   p=1e-10
+
+Train accuracy: 0.789015030380556
+Test accuracy: 0.566713483146067
+Train accuracy inner loops: 0.7896352260654, 0.772661523625844, 0.784846812034226, 0.821052631578947, 0.792375299623331, 0.800252711382542, 0.774958980184274, 0.771490593342981, 0.789949109414758, 0.784841075794621, 0.788704726826274, 0.785573851069059, 0.785043631945212, 0.792810065907729, 0.824690492875496, 0.772452921294061, 0.779493644290367, 0.781047265987025, 0.787720580557586, 0.766085316992694, 0.772583961617546, 0.807008013038164, 0.766685520361991, 0.779774528407188, 0.773389875430692, 0.776129032258065, 0.792463548570347, 0.818355640535373, 0.838613063011174, 0.802985074626866
+Test accuracy inner loops: 0.792284866468843, 0.867321867321867, 0.793322734499205, 0.703703703703704, 0.612903225806452, 0.653153153153153, 0.817857142857143, 0.835651074589128, 0.771535580524345, 0.75609756097561, 0.760869565217391, 0.754545454545455, 0.831649831649832, 0.719257540603248, 0.548387096774194, 0.883950617283951, 0.834319526627219, 0.801075268817204, 0.829896907216495, 0.941463414634146, 0.843060959792477, 0.762658227848101, 0.852085967130215, 0.762589928057554, 0.876237623762376, 0.926406926406926, 0.811320754716981, 0.660208643815201, 0.493606138107417, 0.734856007944389
+############################
+############################
+############################
+Fold 12 eventRatio in train set 0.157360406091371
+Fold 12 eventRatio in test set 0.0813008130081301
+Ids with event in test set:  Z37, Z53, K19, K68, K68, K68, K70, M13, M13, M13
+Model Fold 12
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 394, number of events= 62 
+
+                                                     coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation               -0.6639    0.5149   0.1416
+original_gldm_SmallDependenceLowGrayLevelEmphasis -0.7663    0.4647   0.2692
+Margin_wavelet.HLH_firstorder_Skewness            -0.4764    0.6210   0.1389
+                                                       z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation               -4.687 2.77e-06 ***
+original_gldm_SmallDependenceLowGrayLevelEmphasis -2.846 0.004426 ** 
+Margin_wavelet.HLH_firstorder_Skewness            -3.429 0.000606 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                  exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                  0.5149      1.942
+original_gldm_SmallDependenceLowGrayLevelEmphasis    0.4647      2.152
+Margin_wavelet.HLH_firstorder_Skewness               0.6210      1.610
+                                                  lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                  0.3901    0.6796
+original_gldm_SmallDependenceLowGrayLevelEmphasis    0.2742    0.7878
+Margin_wavelet.HLH_firstorder_Skewness               0.4730    0.8154
+
+Concordance= 0.755  (se = 0.028 )
+Likelihood ratio test= 42.85  on 3 df,   p=3e-09
+Wald test            = 34.8  on 3 df,   p=1e-07
+Score (logrank) test = 37.31  on 3 df,   p=4e-08
+
+Train accuracy: 0.75504597443373
+Test accuracy: 0.614765100671141
+Train accuracy inner loops: 0.726944535608796, 0.744630654083957, 0.748614442881959, 0.784650068613997, 0.71109368874951, 0.730618330194601, 0.724633674315731, 0.742797313885479, 0.747522416234073, 0.749935550399587, 0.753162188458948, 0.718536180800332, 0.785338225909381, 0.753407155025554, 0.750373196218278, 0.790437181309036, 0.75095847948446, 0.784485190409027, 0.744464199127202, 0.752371224281337, 0.745355639946628, 0.740207772220085, 0.737063064707493, 0.743626816832813, 0.728370221327968, 0.746364494806421, 0.744777953308759, 0.76563993236786, 0.744674965421853, 0.749471618357488
+Test accuracy inner loops: 0.882483370288248, 0.769620253164557, 0.767955801104972, 0.619260918253079, 0.854853072128228, 0.877598152424942, 0.842424242424242, 0.798449612403101, 0.803827751196172, 0.7782874617737, 0.746031746031746, 0.835274542429284, 0.622727272727273, 0.74457429048414, 0.787992495309568, 0.555366269165247, 0.773359840954274, 0.664841182913472, 0.823275862068966, 0.811594202898551, 0.727357609710551, 0.798319327731092, 0.81958041958042, 0.764705882352941, 0.884283246977547, 0.767942583732057, 0.806916426512968, 0.813492063492063, 0.7760663507109, 0.877742946708464
+############################
+############################
+############################
+Fold 13 eventRatio in train set 0.136919315403423
+Fold 13 eventRatio in test set 0.148148148148148
+Ids with event in test set:  A06, A06, A09, A09, A09, Z43, Z43, Z47, K68, K68, K68, M03, M03, M03, M03, M03
+Model Fold 13
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 409, number of events= 56 
+
+                                     coef exp(coef) se(coef)      z Pr(>|z|)
+Margin_original_glcm_Idn           0.4971    1.6440   0.1309  3.797 0.000146
+sysVor11                           1.1314    3.1000   0.2708  4.179 2.93e-05
+ageClass                          -0.2908    0.7477   0.1323 -2.198 0.027976
+Margin_original_firstorder_Median -0.4037    0.6678   0.1366 -2.956 0.003119
+                                     
+Margin_original_glcm_Idn          ***
+sysVor11                          ***
+ageClass                          *  
+Margin_original_firstorder_Median ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                  exp(coef) exp(-coef) lower .95 upper .95
+Margin_original_glcm_Idn             1.6440     0.6083    1.2719    2.1249
+sysVor11                             3.1000     0.3226    1.8235    5.2704
+ageClass                             0.7477     1.3375    0.5769    0.9690
+Margin_original_firstorder_Median    0.6678     1.4974    0.5110    0.8728
+
+Concordance= 0.756  (se = 0.034 )
+Likelihood ratio test= 45.12  on 4 df,   p=4e-09
+Wald test            = 46.24  on 4 df,   p=2e-09
+Score (logrank) test = 49.32  on 4 df,   p=5e-10
+
+Train accuracy: 0.755995503372471
+Test accuracy: 0.600149476831091
+Train accuracy inner loops: 0.743606196718306, 0.786675992306347, 0.759216092549426, 0.763695219123506, 0.763133450304469, 0.732529082292115, 0.763209013209013, 0.744416442165638, 0.737634776655828, 0.784487534626039, 0.723826714801444, 0.721875300220963, 0.750041673612269, 0.756738657291143, 0.746944396625925, 0.733325706440911, 0.759366657461106, 0.770479000347102, 0.711203703703704, 0.819257932955337, 0.782736682176431, 0.780843121187289, 0.748991257565568, 0.748353213459142, 0.752042772117422, 0.769442532690984, 0.826620551154747, 0.763962880219969, 0.820057483063026, 0.705566650024963
+Test accuracy inner loops: 0.802850356294537, 0.70855614973262, 0.719512195121951, 0.708171206225681, 0.715032679738562, 0.841269841269841, 0.731907894736842, 0.815718157181572, 0.923344947735192, 0.620833333333333, 0.800766283524904, 0.87027027027027, 0.875, 0.771043771043771, 0.800623052959502, 0.724304715840387, 0.73955773955774, 0.600600600600601, 0.905982905982906, 0.614060258249641, 0.602787456445993, 0.68640350877193, 0.795138888888889, 0.799031476997579, 0.788751714677641, 0.707395498392283, 0.617529880478088, 0.695774647887324, 0.602409638554217, 0.815597075548335
+############################
+############################
+############################
+Fold 14 eventRatio in train set 0.147806004618938
+Fold 14 eventRatio in test set 0.0952380952380952
+Ids with event in test set:  A02, A13, A13, A14, A14, L31, Z38, Z53
+Model Fold 14
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 433, number of events= 64 
+
+                                                     coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation               -0.6476    0.5233   0.1389
+gender1                                           -0.8606    0.4229   0.2522
+original_gldm_SmallDependenceLowGrayLevelEmphasis -0.6140    0.5412   0.2488
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis        -0.2524    0.7770   0.1042
+                                                       z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation               -4.664 3.11e-06 ***
+gender1                                           -3.412 0.000644 ***
+original_gldm_SmallDependenceLowGrayLevelEmphasis -2.468 0.013577 *  
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis        -2.423 0.015395 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                  exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                  0.5233      1.911
+gender1                                              0.4229      2.365
+original_gldm_SmallDependenceLowGrayLevelEmphasis    0.5412      1.848
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis           0.7770      1.287
+                                                  lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                  0.3986    0.6870
+gender1                                              0.2580    0.6933
+original_gldm_SmallDependenceLowGrayLevelEmphasis    0.3323    0.8812
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis           0.6335    0.9529
+
+Concordance= 0.762  (se = 0.028 )
+Likelihood ratio test= 47.82  on 4 df,   p=1e-09
+Wald test            = 43.26  on 4 df,   p=9e-09
+Score (logrank) test = 45.37  on 4 df,   p=3e-09
+
+Train accuracy: 0.762442990283561
+Test accuracy: 0.843177189409369
+Train accuracy inner loops: 0.769914956698135, 0.751106866915531, 0.797073094380967, 0.743117323168149, 0.799924812030075, 0.762635685210312, 0.762865146058423, 0.734970863760419, 0.768625505068406, 0.782177485012212, 0.769944341372913, 0.76056338028169, 0.764774494556765, 0.750501071255788, 0.755405405405405, 0.77886417338874, 0.768614308611394, 0.790186125211506, 0.75005424170102, 0.774161313347609, 0.753778429933969, 0.758969136769544, 0.799589503005424, 0.790129223104468, 0.77029840388619, 0.744085532302093, 0.795745018655235, 0.801416048550236, 0.772613974431133, 0.788148341945189
+Test accuracy inner loops: 0.691831683168317, 0.721572794899044, 0.583835946924005, 0.769994162288383, 0.570212765957447, 0.699547511312217, 0.755605381165919, 0.88622754491018, 0.70230607966457, 0.684671532846715, 0.724007561436673, 0.797794117647059, 0.743243243243243, 0.827981651376147, 0.753507014028056, 0.69757174392936, 0.634862385321101, 0.544615384615385, 0.833333333333333, 0.748613678373383, 0.805194805194805, 0.774149659863946, 0.541254125412541, 0.646540880503145, 0.668122270742358, 0.859375, 0.607692307692308, 0.669619131975199, 0.665862484921592, 0.549689440993789
+############################
+############################
+############################
+Fold 15 eventRatio in train set 0.139588100686499
+Fold 15 eventRatio in test set 0.1375
+Ids with event in test set:  A05, A05, A14, A14, Z39, Z39, Z42, Z42, Z43, Z43, Z50
+Model Fold 15
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 437, number of events= 61 
+
+                                             coef exp(coef) se(coef)      z
+Margin_wavelet.HLL_glcm_ClusterProminence -0.6400    0.5273   0.2282 -2.805
+Margin_wavelet.LLH_glcm_Correlation       -0.6181    0.5390   0.1506 -4.103
+gender1                                   -0.9491    0.3871   0.2590 -3.664
+wavelet.HLH_firstorder_Kurtosis            0.2646    1.3028   0.1051  2.517
+                                          Pr(>|z|)    
+Margin_wavelet.HLL_glcm_ClusterProminence 0.005029 ** 
+Margin_wavelet.LLH_glcm_Correlation       4.07e-05 ***
+gender1                                   0.000248 ***
+wavelet.HLH_firstorder_Kurtosis           0.011840 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                          exp(coef) exp(-coef) lower .95
+Margin_wavelet.HLL_glcm_ClusterProminence    0.5273     1.8966    0.3371
+Margin_wavelet.LLH_glcm_Correlation          0.5390     1.8554    0.4012
+gender1                                      0.3871     2.5834    0.2330
+wavelet.HLH_firstorder_Kurtosis              1.3028     0.7676    1.0603
+                                          upper .95
+Margin_wavelet.HLL_glcm_ClusterProminence    0.8246
+Margin_wavelet.LLH_glcm_Correlation          0.7241
+gender1                                      0.6431
+wavelet.HLH_firstorder_Kurtosis              1.6009
+
+Concordance= 0.772  (se = 0.029 )
+Likelihood ratio test= 55.13  on 4 df,   p=3e-11
+Wald test            = 50.18  on 4 df,   p=3e-10
+Score (logrank) test = 53.99  on 4 df,   p=5e-11
+
+Train accuracy: 0.772038855232922
+Test accuracy: 0.693396226415094
+Train accuracy inner loops: 0.783317767080968, 0.848571676651906, 0.782359366466412, 0.751250781738587, 0.766345811051693, 0.773160873080032, 0.758185840707965, 0.799028060824581, 0.821087680355161, 0.72997059085643, 0.80803912578328, 0.830289455547898, 0.744023224043716, 0.721244530870199, 0.780016602520564, 0.793666104010932, 0.758340054256177, 0.729895893105992, 0.794504958543326, 0.761814744801512, 0.783453927294918, 0.761973758351445, 0.771151535953321, 0.823704438383337, 0.765765765765766, 0.775563936526009, 0.783076035204155, 0.742099380144294, 0.762248743718593, 0.727041594630326
+Test accuracy inner loops: 0.678481012658228, 0.496280552603613, 0.761029411764706, 0.878419452887538, 0.907268170426065, 0.597423510466989, 0.897755610972569, 0.62778730703259, 0.502304147465438, 0.903657448706512, 0.620996441281139, 0.575862068965517, 0.858353510895884, 0.839797639123103, 0.635443037974684, 0.654476670870114, 0.799007444168734, 0.927113702623907, 0.721792890262751, 0.779160186625194, 0.764766839378238, 0.840499306518724, 0.835978835978836, 0.567917205692109, 0.812395309882747, 0.818181818181818, 0.718446601941748, 0.848280512474713, 0.776892430278884, 0.858151023288638
+############################
+############################
+############################
+Fold 16 eventRatio in train set 0.146171693735499
+Fold 16 eventRatio in test set 0.104651162790698
+Ids with event in test set:  A02, A14, A14, A23, A23, Z47, K46, K60, K60
+Model Fold 16
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 431, number of events= 63 
+
+                                           coef exp(coef) se(coef)      z
+wavelet.LLH_glcm_Correlation            -0.2961    0.7437   0.1135 -2.609
+sysVor21                                -1.1167    0.3274   0.2713 -4.117
+Margin_wavelet.LHH_glcm_ClusterTendency -0.4776    0.6202   0.1524 -3.134
+wavelet.LHH_firstorder_Skewness          0.3371    1.4009   0.1042  3.237
+                                        Pr(>|z|)    
+wavelet.LLH_glcm_Correlation             0.00909 ** 
+sysVor21                                3.84e-05 ***
+Margin_wavelet.LHH_glcm_ClusterTendency  0.00172 ** 
+wavelet.LHH_firstorder_Skewness          0.00121 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                        exp(coef) exp(-coef) lower .95
+wavelet.LLH_glcm_Correlation               0.7437     1.3446    0.5954
+sysVor21                                   0.3274     3.0547    0.1924
+Margin_wavelet.LHH_glcm_ClusterTendency    0.6202     1.6123    0.4601
+wavelet.LHH_firstorder_Skewness            1.4009     0.7138    1.1423
+                                        upper .95
+wavelet.LLH_glcm_Correlation               0.9290
+sysVor21                                   0.5571
+Margin_wavelet.LHH_glcm_ClusterTendency    0.8361
+wavelet.LHH_firstorder_Skewness            1.7182
+
+Concordance= 0.761  (se = 0.032 )
+Likelihood ratio test= 51.96  on 4 df,   p=1e-10
+Wald test            = 52.11  on 4 df,   p=1e-10
+Score (logrank) test = 54.56  on 4 df,   p=4e-11
+
+Train accuracy: 0.761256437713528
+Test accuracy: 0.595628415300546
+Train accuracy inner loops: 0.725624585452133, 0.785652954492233, 0.806011800350821, 0.736083499005964, 0.758889623265036, 0.731349833245568, 0.754465660609794, 0.762902862294343, 0.772158665668769, 0.761476210408818, 0.765893963736516, 0.760603266596417, 0.770608212411238, 0.730510486743174, 0.738428510090168, 0.738503473138134, 0.733543332525644, 0.749237593568062, 0.725437656305824, 0.750196330406225, 0.739171060535273, 0.759135589404967, 0.718730158730159, 0.730037697052776, 0.766571371584336, 0.728988292853399, 0.804118575105871, 0.751365890560646, 0.753880266075388, 0.743059707867088
+Test accuracy inner loops: 0.927238805970149, 0.629337539432177, 0.582172701949861, 0.807875894988067, 0.764705882352941, 0.866432337434095, 0.797546012269939, 0.722513089005236, 0.750541125541126, 0.815656565656566, 0.769444444444444, 0.80952380952381, 0.72280701754386, 0.879464285714286, 0.840041279669763, 0.78692927484333, 0.889411764705882, 0.841095890410959, 0.80327868852459, 0.854581673306773, 0.912, 0.588541666666667, 0.915436241610738, 0.846491228070176, 0.734177215189873, 0.791145332050048, 0.523446019629226, 0.819387755102041, 0.764044943820225, 0.801569506726457
+############################
+############################
+############################
+Fold 17 eventRatio in train set 0.143222506393862
+Fold 17 eventRatio in test set 0.126984126984127
+Ids with event in test set:  A08, A08, L31, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z38, K60, K60, M08
+Model Fold 17
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 391, number of events= 56 
+
+                                                            coef exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                      -0.6356    0.5296
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized -0.5453    0.5797
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis    -0.6310    0.5321
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis   0.2970    1.3458
+                                                         se(coef)      z
+Margin_wavelet.LLH_glcm_Correlation                        0.1644 -3.867
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized   0.1453 -3.753
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis      0.2031 -3.106
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis    0.1410  2.105
+                                                         Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation                      0.000110 ***
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized 0.000175 ***
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis    0.001894 ** 
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis  0.035251 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                         exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                         0.5296     1.8881
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized    0.5797     1.7251
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis       0.5321     1.8795
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis     1.3458     0.7431
+                                                         lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                         0.3838    0.7309
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized    0.4360    0.7707
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis       0.3573    0.7923
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis     1.0207    1.7743
+
+Concordance= 0.732  (se = 0.035 )
+Likelihood ratio test= 45.99  on 4 df,   p=2e-09
+Wald test            = 38.11  on 4 df,   p=1e-07
+Score (logrank) test = 39.83  on 4 df,   p=5e-08
+
+Train accuracy: 0.732102981741757
+Test accuracy: 0.676433121019108
+Train accuracy inner loops: 0.75277030661646, 0.719678626458288, 0.748600275355668, 0.739396887159533, 0.707307873644507, 0.731884708628895, 0.710400588019111, 0.731796000382739, 0.724932130659427, 0.712940253114883, 0.718578989862743, 0.704335664335664, 0.731635184125167, 0.727863612147043, 0.707281241391975, 0.739955604883463, 0.72843137254902, 0.739178485909007, 0.742958481118298, 0.736492281303602, 0.763164193393968, 0.743770155379654, 0.707360485813004, 0.760630107781594, 0.769137913690776, 0.723300487707773, 0.703954577149118, 0.730024857954545, 0.728094035360404, 0.733982573039467
+Test accuracy inner loops: 0.657971014492754, 0.788036410923277, 0.656593406593407, 0.706140350877193, 0.879699248120301, 0.727272727272727, 0.861892583120205, 0.766968325791855, 0.8, 0.838174273858921, 0.810408921933085, 0.872062663185379, 0.767220902612827, 0.784153005464481, 0.848396501457726, 0.695883134130146, 0.742138364779874, 0.607142857142857, 0.637023593466425, 0.727019498607242, 0.600387972841901, 0.646296296296296, 0.766187050359712, 0.66402378592666, 0.567829457364341, 0.778584392014519, 0.862669245647969, 0.803571428571429, 0.786995515695067, 0.726829268292683
+############################
+############################
+############################
+Fold 18 eventRatio in train set 0.158024691358025
+Fold 18 eventRatio in test set 0.0714285714285714
+Ids with event in test set:  A08, A08, Z38, Z42, Z42, Z53, Z54, K46
+Model Fold 18
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 405, number of events= 64 
+
+                                        coef exp(coef) se(coef)      z Pr(>|z|)
+Margin_wavelet.HLL_glcm_Contrast    -0.84174   0.43096  0.18749 -4.490 7.14e-06
+gender1                             -0.81536   0.44248  0.25479 -3.200  0.00137
+Margin_wavelet.LLH_glcm_Correlation -0.61650   0.53983  0.15026 -4.103 4.08e-05
+wavelet.HHH_firstorder_Mean         -0.15719   0.85454  0.07868 -1.998  0.04573
+                                       
+Margin_wavelet.HLL_glcm_Contrast    ***
+gender1                             ** 
+Margin_wavelet.LLH_glcm_Correlation ***
+wavelet.HHH_firstorder_Mean         *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                    exp(coef) exp(-coef) lower .95 upper .95
+Margin_wavelet.HLL_glcm_Contrast       0.4310      2.320    0.2984    0.6223
+gender1                                0.4425      2.260    0.2685    0.7291
+Margin_wavelet.LLH_glcm_Correlation    0.5398      1.852    0.4021    0.7247
+wavelet.HHH_firstorder_Mean            0.8545      1.170    0.7324    0.9970
+
+Concordance= 0.772  (se = 0.032 )
+Likelihood ratio test= 55.53  on 4 df,   p=3e-11
+Wald test            = 45.87  on 4 df,   p=3e-09
+Score (logrank) test = 49.38  on 4 df,   p=5e-10
+
+Train accuracy: 0.771821707485523
+Test accuracy: 0.669902912621359
+Train accuracy inner loops: 0.774390677183259, 0.775344340833262, 0.798124304562073, 0.746901017576318, 0.781098322008043, 0.816898093669099, 0.76756522680524, 0.769025785719884, 0.763464024127531, 0.77162962962963, 0.813502109704641, 0.776859504132231, 0.784787201931784, 0.78463834020179, 0.816214329348111, 0.75311100049776, 0.771775082690187, 0.757191283292978, 0.758482248287806, 0.817061062386232, 0.799766718506998, 0.799544955280088, 0.776053423626787, 0.78969801396572, 0.773327174343408, 0.793750503342192, 0.784507467189621, 0.741920015344778, 0.804532152772567, 0.778021576156519
+Test accuracy inner loops: 0.694244604316547, 0.712925170068027, 0.642411642411642, 0.847234416154522, 0.74113475177305, 0.553982300884956, 0.805675508945096, 0.802158273381295, 0.786904761904762, 0.70026525198939, 0.620205799812909, 0.755331753554502, 0.640562248995984, 0.767705382436261, 0.610513739545998, 0.835862068965517, 0.759493670886076, 0.756400310318076, 0.843205574912892, 0.607438016528926, 0.666015625, 0.692737430167598, 0.709292412617221, 0.747497219132369, 0.81283422459893, 0.612481857764877, 0.78448275862069, 0.821608040201005, 0.551948051948052, 0.719689621726479
+############################
+############################
+############################
+Fold 19 eventRatio in train set 0.140515222482436
+Fold 19 eventRatio in test set 0.133333333333333
+Ids with event in test set:  A08, A08, Z46, Z46, Z47, Z54, K67, K67, K67, K67, K67, M08
+Model Fold 19
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 427, number of events= 60 
+
+                                  coef exp(coef) se(coef)      z Pr(>|z|)    
+sysVor21                       -0.9934    0.3703   0.2680 -3.707  0.00021 ***
+wavelet.LLH_firstorder_Minimum -0.5040    0.6041   0.1027 -4.907 9.27e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                               exp(coef) exp(-coef) lower .95 upper .95
+sysVor21                          0.3703      2.700     0.219    0.6261
+wavelet.LLH_firstorder_Minimum    0.6041      1.655     0.494    0.7389
+
+Concordance= 0.763  (se = 0.028 )
+Likelihood ratio test= 43.81  on 2 df,   p=3e-10
+Wald test            = 47.5  on 2 df,   p=5e-11
+Score (logrank) test = 53.9  on 2 df,   p=2e-12
+
+Train accuracy: 0.763150647204627
+Test accuracy: 0.495934959349594
+Train accuracy inner loops: 0.775459170475123, 0.745910657962297, 0.775496522249225, 0.770725491757585, 0.746460522887171, 0.774809454153514, 0.768183788469874, 0.768705346627934, 0.782537543319215, 0.782248904754178, 0.745197928845833, 0.738434608652163, 0.747657657657658, 0.714670981661273, 0.750869977855109, 0.773531089560753, 0.739521648850265, 0.800017048844941, 0.770413915284265, 0.786225186852045, 0.769590398436955, 0.758112475759535, 0.765492707221629, 0.762127132373964, 0.757273652085453, 0.751567232513911, 0.77116935483871, 0.773517642779192, 0.752934509835667, 0.723654094934819
+Test accuracy inner loops: 0.60548885077187, 0.824561403508772, 0.717081850533808, 0.668058455114823, 0.885507246376812, 0.773778920308483, 0.728291316526611, 0.640826873385013, 0.642706131078224, 0.736462093862816, 0.81592039800995, 0.877685950413223, 0.758226037195994, 0.910780669144981, 0.860706860706861, 0.727272727272727, 0.918918918918919, 0.563421828908555, 0.732283464566929, 0.616666666666667, 0.715846994535519, 0.775844930417495, 0.781115879828326, 0.787488500459982, 0.767234387672344, 0.852589641434263, 0.63681592039801, 0.66030534351145, 0.707509881422925, 0.751612903225806
+############################
+############################
+############################
+Fold 20 eventRatio in train set 0.129753914988814
+Fold 20 eventRatio in test set 0.2
+Ids with event in test set:  Z36, Z36, Z36, Z36, Z38, Z39, Z39, K46, M03, M03, M03, M03, M03, M08
+Model Fold 20
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 447, number of events= 58 
+
+                                                         coef exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                   -0.7744    0.4610
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis -0.8869    0.4119
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis  -1.2635    0.2827
+Margin_original_firstorder_Median                     -0.2835    0.7531
+                                                      se(coef)      z Pr(>|z|)
+Margin_wavelet.LLH_glcm_Correlation                     0.1561 -4.961    7e-07
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis   0.2662 -3.332 0.000863
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis    0.6099 -2.072 0.038309
+Margin_original_firstorder_Median                       0.1188 -2.387 0.016996
+                                                         
+Margin_wavelet.LLH_glcm_Correlation                   ***
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis ***
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis  *  
+Margin_original_firstorder_Median                     *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                      exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                      0.4610      2.169
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis    0.4119      2.428
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis     0.2827      3.538
+Margin_original_firstorder_Median                        0.7531      1.328
+                                                      lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                     0.33948    0.6260
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis   0.24448    0.6941
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis    0.08553    0.9342
+Margin_original_firstorder_Median                       0.59668    0.9506
+
+Concordance= 0.795  (se = 0.029 )
+Likelihood ratio test= 62.88  on 4 df,   p=7e-13
+Wald test            = 46.44  on 4 df,   p=2e-09
+Score (logrank) test = 50.19  on 4 df,   p=3e-10
+
+Train accuracy: 0.794899162968373
+Test accuracy: 0.329113924050633
+Train accuracy inner loops: 0.785533769063181, 0.796064530130941, 0.790904865199876, 0.794852060885924, 0.780720665229443, 0.780983004134129, 0.811755361397935, 0.774503523382447, 0.793185942913711, 0.782409677946706, 0.756392375639238, 0.789048473967684, 0.811066229708101, 0.774952125622367, 0.804674121083913, 0.784226922446303, 0.790060528830838, 0.809160305343511, 0.782192477126398, 0.802601497832085, 0.773884547517015, 0.7862881210514, 0.836873333906613, 0.780981945919451, 0.792591370348981, 0.774378416505026, 0.78283557233263, 0.815550510783201, 0.856879795396419, 0.792705345981322
+Test accuracy inner loops: 0.858662613981763, 0.731182795698925, 0.805555555555556, 0.78125, 0.875278396436526, 0.834164588528678, 0.706008583690987, 0.902173913043478, 0.797020484171322, 0.827213822894168, 0.915129151291513, 0.805220883534137, 0.687344913151365, 0.91812865497076, 0.727176220806794, 0.85663082437276, 0.82392776523702, 0.711009174311927, 0.873889875666075, 0.722627737226277, 0.930379746835443, 0.815303430079156, 0.654853620955316, 0.831140350877193, 0.836812144212524, 0.891451831750339, 0.788702928870293, 0.733485193621868, 0.583547557840617, 0.849358974358974
+############################
+############################
+############################
+Fold 21 eventRatio in train set 0.142212189616253
+Fold 21 eventRatio in test set 0.121621621621622
+Ids with event in test set:  A05, A05, A13, A13, A23, A23, Z38, Z47, Z50
+Model Fold 21
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 443, number of events= 63 
+
+                                                            coef exp(coef)
+wavelet.LLH_firstorder_Range                              0.3946    1.4838
+gender1                                                  -1.0746    0.3414
+sysDanach21                                              -0.9590    0.3833
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized -0.2972    0.7429
+                                                         se(coef)      z
+wavelet.LLH_firstorder_Range                               0.1015  3.889
+gender1                                                    0.2566 -4.188
+sysDanach21                                                0.2752 -3.485
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized   0.1206 -2.465
+                                                         Pr(>|z|)    
+wavelet.LLH_firstorder_Range                             0.000101 ***
+gender1                                                  2.81e-05 ***
+sysDanach21                                              0.000492 ***
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized 0.013718 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                         exp(coef) exp(-coef)
+wavelet.LLH_firstorder_Range                                1.4838      0.674
+gender1                                                     0.3414      2.929
+sysDanach21                                                 0.3833      2.609
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.7429      1.346
+                                                         lower .95 upper .95
+wavelet.LLH_firstorder_Range                                1.2162    1.8102
+gender1                                                     0.2065    0.5646
+sysDanach21                                                 0.2235    0.6573
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized    0.5865    0.9410
+
+Concordance= 0.784  (se = 0.024 )
+Likelihood ratio test= 50.12  on 4 df,   p=3e-10
+Wald test            = 50.77  on 4 df,   p=2e-10
+Score (logrank) test = 55.72  on 4 df,   p=2e-11
+
+Train accuracy: 0.784108755398508
+Test accuracy: 0.469879518072289
+Train accuracy inner loops: 0.814646741256553, 0.773217310950254, 0.782115398969919, 0.785468395224493, 0.804050806728459, 0.793119479311948, 0.783565823888404, 0.7826688364524, 0.7842076047738, 0.788823689956332, 0.804882903204405, 0.772449263274951, 0.709199961304053, 0.810041371572821, 0.759757155247181, 0.775772430184195, 0.79288365903201, 0.794789695823024, 0.764292265362275, 0.747097270280661, 0.773222124670764, 0.783975729159484, 0.804288528564934, 0.782809070958303, 0.81557458673571, 0.780446416916852, 0.7934319740166, 0.782715711746205, 0.79077743902439, 0.759247697830498
+Test accuracy inner loops: 0.676506765067651, 0.835336538461538, 0.712408759124088, 0.782361308677098, 0.692783505154639, 0.707653701380176, 0.784893267651888, 0.784569138276553, 0.75, 0.78695652173913, 0.570570570570571, 0.806513409961686, 0.881466928618206, 0.651685393258427, 0.80936729663106, 0.790297339593114, 0.733705772811918, 0.751173708920188, 0.864385297845374, 0.896644295302014, 0.693069306930693, 0.753112033195021, 0.71994715984148, 0.771043771043771, 0.558823529411765, 0.804289544235925, 0.763663220088626, 0.778021978021978, 0.601769911504425, 0.893395133256083
+############################
+############################
+############################
+Fold 22 eventRatio in train set 0.148418491484185
+Fold 22 eventRatio in test set 0.10377358490566
+Ids with event in test set:  A06, A06, L31, Z53, K17, K67, K67, K67, K67, K67, K70
+Model Fold 22
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 411, number of events= 61 
+
+                                       coef exp(coef) se(coef)      z Pr(>|z|)
+wavelet.LLH_firstorder_Minimum      -0.7286    0.4826   0.1118 -6.515 7.27e-11
+sysWaehrend21                       -1.1337    0.3218   0.2617 -4.333 1.47e-05
+wavelet.LHL_firstorder_90Percentile -0.7212    0.4862   0.1804 -3.998 6.40e-05
+gender1                             -0.9753    0.3771   0.2627 -3.713 0.000205
+                                       
+wavelet.LLH_firstorder_Minimum      ***
+sysWaehrend21                       ***
+wavelet.LHL_firstorder_90Percentile ***
+gender1                             ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                    exp(coef) exp(-coef) lower .95 upper .95
+wavelet.LLH_firstorder_Minimum         0.4826      2.072    0.3876    0.6008
+sysWaehrend21                          0.3218      3.107    0.1927    0.5375
+wavelet.LHL_firstorder_90Percentile    0.4862      2.057    0.3414    0.6924
+gender1                                0.3771      2.652    0.2253    0.6310
+
+Concordance= 0.822  (se = 0.022 )
+Likelihood ratio test= 76.36  on 4 df,   p=1e-15
+Wald test            = 71.71  on 4 df,   p=1e-14
+Score (logrank) test = 84.23  on 4 df,   p=<2e-16
+
+Train accuracy: 0.821657768430135
+Test accuracy: 0.43646408839779
+Train accuracy inner loops: 0.823863636363636, 0.838405640693575, 0.813523692738898, 0.845139439360092, 0.827189154053301, 0.852248049545564, 0.840123456790123, 0.838167719701321, 0.843035631652013, 0.804350099341211, 0.818730158730159, 0.798426654326701, 0.804254617414248, 0.8220925205361, 0.820862481183034, 0.799940810890796, 0.828743273187718, 0.844887205664416, 0.821793896356412, 0.841514726507714, 0.809568400442666, 0.838599283724632, 0.824143070044709, 0.822094578645055, 0.828495674016188, 0.797831281014519, 0.829095590601867, 0.824434126523506, 0.82918467729915, 0.786783042394015
+Test accuracy inner loops: 0.746081504702194, 0.682242990654206, 0.850782190132371, 0.580536912751678, 0.755928853754941, 0.646067415730337, 0.685654008438819, 0.658461538461538, 0.685393258426966, 0.762639245929734, 0.786792452830189, 0.843582887700535, 0.797323135755258, 0.806853582554517, 0.835400225479143, 0.747001090512541, 0.75, 0.668885191347754, 0.779202279202279, 0.718137254901961, 0.836734693877551, 0.707979626485569, 0.678423236514523, 0.815018315018315, 0.772549019607843, 0.826086956521739, 0.79646017699115, 0.80952380952381, 0.759036144578313, 0.681034482758621
+############################
+############################
+############################
+Fold 23 eventRatio in train set 0.127562642369021
+Fold 23 eventRatio in test set 0.205128205128205
+Ids with event in test set:  A05, A05, A23, A23, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z33, Z38, Z54, K46
+Model Fold 23
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 439, number of events= 56 
+
+                                                   coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation             -0.6022    0.5476   0.1470
+Margin_wavelet.HHH_firstorder_Skewness           0.3439    1.4105   0.1099
+gender1                                         -0.8521    0.4265   0.2791
+wavelet.LLL_glszm_SmallAreaLowGrayLevelEmphasis -0.6082    0.5443   0.2175
+                                                     z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation             -4.096  4.2e-05 ***
+Margin_wavelet.HHH_firstorder_Skewness           3.130  0.00175 ** 
+gender1                                         -3.053  0.00227 ** 
+wavelet.LLL_glszm_SmallAreaLowGrayLevelEmphasis -2.796  0.00517 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_Correlation                0.5476      1.826    0.4105
+Margin_wavelet.HHH_firstorder_Skewness             1.4105      0.709    1.1372
+gender1                                            0.4265      2.345    0.2468
+wavelet.LLL_glszm_SmallAreaLowGrayLevelEmphasis    0.5443      1.837    0.3554
+                                                upper .95
+Margin_wavelet.LLH_glcm_Correlation                0.7305
+Margin_wavelet.HHH_firstorder_Skewness             1.7494
+gender1                                            0.7371
+wavelet.LLL_glszm_SmallAreaLowGrayLevelEmphasis    0.8337
+
+Concordance= 0.763  (se = 0.031 )
+Likelihood ratio test= 41.8  on 4 df,   p=2e-08
+Wald test            = 37.48  on 4 df,   p=1e-07
+Score (logrank) test = 40.5  on 4 df,   p=3e-08
+
+Train accuracy: 0.762750086735284
+Test accuracy: 0.706235011990408
+Train accuracy inner loops: 0.772356828193833, 0.749433392092672, 0.755504436411436, 0.788133321418997, 0.753599067987018, 0.754365266635205, 0.753747670367069, 0.762562245359891, 0.769861866889912, 0.796034763715372, 0.780558037930692, 0.792095544904534, 0.776201733648542, 0.798712528823982, 0.770457164809835, 0.741965973534972, 0.760211400528501, 0.753019088430074, 0.749924902373085, 0.756461939767607, 0.768321513002364, 0.732678231224306, 0.74825378346915, 0.769289827255278, 0.726107226107226, 0.78639938615001, 0.759870250231696, 0.756039339253318, 0.75090377001205, 0.734710150705685
+Test accuracy inner loops: 0.755605381165919, 0.868852459016394, 0.808370044052863, 0.690076335877863, 0.849187935034803, 0.832352941176471, 0.813299232736573, 0.698841698841699, 0.753061224489796, 0.612573099415205, 0.631182795698925, 0.523952095808383, 0.682974559686888, 0.657929226736566, 0.714110429447853, 0.758465011286682, 0.749034749034749, 0.763837638376384, 0.704280155642023, 0.847826086956522, 0.72972972972973, 0.827245804540967, 0.763796909492274, 0.792270531400966, 0.778058007566204, 0.703971119133574, 0.726760563380282, 0.738650306748466, 0.817351598173516, 0.921119592875318
+############################
+############################
+############################
+Fold 24 eventRatio in train set 0.150246305418719
+Fold 24 eventRatio in test set 0.0990990990990991
+Ids with event in test set:  A03, A03, A03, A03, A08, A08, Z43, Z43, Z50, Z53, Z54
+Model Fold 24
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 406, number of events= 61 
+
+                                                   coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation             -0.6054    0.5459   0.1435
+original_glszm_SmallAreaLowGrayLevelEmphasis    -0.4967    0.6085   0.2047
+gender1                                         -0.8373    0.4329   0.2587
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis -0.3414    0.7108   0.1405
+                                                     z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation             -4.219 2.45e-05 ***
+original_glszm_SmallAreaLowGrayLevelEmphasis    -2.427  0.01524 *  
+gender1                                         -3.237  0.00121 ** 
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis -2.429  0.01512 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_Correlation                0.5459      1.832    0.4121
+original_glszm_SmallAreaLowGrayLevelEmphasis       0.6085      1.643    0.4074
+gender1                                            0.4329      2.310    0.2607
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis    0.7108      1.407    0.5397
+                                                upper .95
+Margin_wavelet.LLH_glcm_Correlation                0.7231
+original_glszm_SmallAreaLowGrayLevelEmphasis       0.9089
+gender1                                            0.7187
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis    0.9362
+
+Concordance= 0.753  (se = 0.032 )
+Likelihood ratio test= 42.36  on 4 df,   p=1e-08
+Wald test            = 37.38  on 4 df,   p=2e-07
+Score (logrank) test = 39.68  on 4 df,   p=5e-08
+
+Train accuracy: 0.752704360432698
+Test accuracy: 0.862199747155499
+Train accuracy inner loops: 0.776192859526193, 0.777026455920886, 0.780653616184782, 0.799226554946826, 0.731981981981982, 0.800848494737701, 0.738942917547569, 0.748431476302064, 0.769000598444046, 0.763821493914565, 0.726848635235732, 0.755020080321285, 0.770323129251701, 0.755936422826503, 0.7730234749156, 0.714589235127479, 0.753720113693362, 0.736842105263158, 0.768444586394123, 0.753943217665615, 0.693489608982567, 0.769913404422815, 0.717790387182911, 0.744553153005015, 0.741110761485211, 0.698883248730964, 0.734066297429115, 0.714666403474141, 0.734159258558729, 0.776615806617521
+Test accuracy inner loops: 0.69009009009009, 0.607371794871795, 0.631048387096774, 0.508163265306122, 0.827538247566064, 0.51844262295082, 0.810372771474879, 0.801630434782609, 0.685968819599109, 0.721804511278195, 0.857802400738689, 0.735660847880299, 0.651741293532338, 0.696373056994819, 0.650246305418719, 0.855752212389381, 0.720735785953177, 0.783132530120482, 0.705263157894737, 0.779220779220779, 0.87319587628866, 0.618257261410788, 0.884808013355593, 0.8, 0.774271844660194, 0.878607809847199, 0.816993464052288, 0.784722222222222, 0.810240963855422, 0.60672514619883
+############################
+############################
+############################
+Fold 25 eventRatio in train set 0.146987951807229
+Fold 25 eventRatio in test set 0.107843137254902
+Ids with event in test set:  A02, A23, A23, Z37, Z54, K19, K67, K67, K67, K67, K67
+Model Fold 25
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 415, number of events= 61 
+
+                                                   coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_ClusterProminence       -0.6465    0.5239   0.2369
+sysVor11                                         0.9654    2.6258   0.2680
+wavelet.LHH_glrlm_ShortRunHighGrayLevelEmphasis -0.4141    0.6609   0.1485
+molTarget11                                      0.7377    2.0911   0.2621
+                                                     z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_ClusterProminence       -2.729 0.006354 ** 
+sysVor11                                         3.602 0.000316 ***
+wavelet.LHH_glrlm_ShortRunHighGrayLevelEmphasis -2.788 0.005304 ** 
+molTarget11                                      2.815 0.004883 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_ClusterProminence          0.5239     1.9088    0.3293
+sysVor11                                           2.6258     0.3808    1.5528
+wavelet.LHH_glrlm_ShortRunHighGrayLevelEmphasis    0.6609     1.5130    0.4940
+molTarget11                                        2.0911     0.4782    1.2511
+                                                upper .95
+Margin_wavelet.LLH_glcm_ClusterProminence          0.8335
+sysVor11                                           4.4403
+wavelet.LHH_glrlm_ShortRunHighGrayLevelEmphasis    0.8843
+molTarget11                                        3.4950
+
+Concordance= 0.765  (se = 0.028 )
+Likelihood ratio test= 47.94  on 4 df,   p=1e-09
+Wald test            = 40.52  on 4 df,   p=3e-08
+Score (logrank) test = 43.54  on 4 df,   p=8e-09
+
+Train accuracy: 0.764842526065583
+Test accuracy: 0.553370786516854
+Train accuracy inner loops: 0.761596373350603, 0.73016161249319, 0.769388076136542, 0.774873774873775, 0.756413311095227, 0.757266358622745, 0.767661412913033, 0.77769577695777, 0.781591788658927, 0.818478678447945, 0.789090368608799, 0.7641065830721, 0.764582382473756, 0.769165444298618, 0.794582392776524, 0.726861838726246, 0.7248708780294, 0.778879375093886, 0.761927255550307, 0.768163265306122, 0.764160996803017, 0.760313495822927, 0.747766268680319, 0.745125609298838, 0.720565942395149, 0.767456936469717, 0.776021953065859, 0.742257138540565, 0.779976813514409, 0.772943392841123
+Test accuracy inner loops: 0.79696394686907, 0.760210803689065, 0.75984990619137, 0.790322580645161, 0.838078291814947, 0.831202046035806, 0.764331210191083, 0.779359430604982, 0.738484398216939, 0.513560804899388, 0.607052896725441, 0.690736688548505, 0.761099365750529, 0.665148063781321, 0.638728323699422, 0.843347639484979, 0.774725274725275, 0.66, 0.739088263821532, 0.717532467532467, 0.741157556270096, 0.784260515603799, 0.859259259259259, 0.801158301158301, 0.868258859784284, 0.736897274633124, 0.754816112084063, 0.875, 0.728682170542636, 0.664502164502164
+############################
+############################
+############################
+Fold 26 eventRatio in train set 0.147699757869249
+Fold 26 eventRatio in test set 0.105769230769231
+Ids with event in test set:  A03, A03, A03, A03, A06, A06, Z37, Z39, Z39, K17, M08
+Model Fold 26
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 413, number of events= 61 
+
+                                                    coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_Correlation              -0.5933    0.5525   0.1523
+wavelet.LHH_glszm_SmallAreaHighGrayLevelEmphasis -0.5088    0.6012   0.1617
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis  -0.3301    0.7188   0.1430
+sysWaehrend11                                     0.8737    2.3958   0.2802
+                                                      z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_Correlation              -3.894 9.85e-05 ***
+wavelet.LHH_glszm_SmallAreaHighGrayLevelEmphasis -3.147  0.00165 ** 
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis  -2.308  0.02100 *  
+sysWaehrend11                                     3.118  0.00182 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                 exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_Correlation                 0.5525     1.8099    0.4099
+wavelet.LHH_glszm_SmallAreaHighGrayLevelEmphasis    0.6012     1.6632    0.4380
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis     0.7188     1.3912    0.5431
+sysWaehrend11                                       2.3958     0.4174    1.3834
+                                                 upper .95
+Margin_wavelet.LLH_glcm_Correlation                 0.7448
+wavelet.LHH_glszm_SmallAreaHighGrayLevelEmphasis    0.8254
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis     0.9514
+sysWaehrend11                                       4.1494
+
+Concordance= 0.774  (se = 0.03 )
+Likelihood ratio test= 54.26  on 4 df,   p=5e-11
+Wald test            = 49.27  on 4 df,   p=5e-10
+Score (logrank) test = 54.27  on 4 df,   p=5e-11
+
+Train accuracy: 0.774116734965112
+Test accuracy: 0.548029556650246
+Train accuracy inner loops: 0.78996036988111, 0.786100676183321, 0.762137015082164, 0.749560941341763, 0.755395106297633, 0.747296683325761, 0.771166101133824, 0.743488555643252, 0.793527701140855, 0.746025397460254, 0.804816940111533, 0.802608931968475, 0.809120465434634, 0.742210242587601, 0.767533104462972, 0.779767301299486, 0.785391277688357, 0.756519639407598, 0.778105906313646, 0.808611670020121, 0.771862029483326, 0.763992235522485, 0.817385011257639, 0.80003124511795, 0.774171002562709, 0.825532978014657, 0.724025331486246, 0.752924982794219, 0.788561936402468, 0.776811594202899
+Test accuracy inner loops: 0.615635179153095, 0.759036144578313, 0.863768115942029, 0.89771197846568, 0.876685934489403, 0.777602523659306, 0.78018018018018, 0.863554757630162, 0.563432835820896, 0.851423487544484, 0.619136960600375, 0.595873786407767, 0.633181126331811, 0.867677463818056, 0.854460093896714, 0.698170731707317, 0.717821782178218, 0.86372745490982, 0.744047619047619, 0.543560606060606, 0.760956175298805, 0.813868613138686, 0.515094339622642, 0.611764705882353, 0.699519230769231, 0.542857142857143, 0.783300198807157, 0.889460154241645, 0.610169491525424, 0.808720112517581
+############################
+############################
+############################
+Fold 27 eventRatio in train set 0.145363408521303
+Fold 27 eventRatio in test set 0.11864406779661
+Ids with event in test set:  A02, A09, A09, A09, A13, A13, Z37, Z42, Z42, K67, K67, K67, K67, K67
+Model Fold 27
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 399, number of events= 58 
+
+                                                         coef exp(coef)
+wavelet.HLH_gldm_SmallDependenceHighGrayLevelEmphasis -1.0481    0.3506
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis             0.6191    1.8573
+Margin_wavelet.LLH_glszm_ZoneEntropy                  -0.4190    0.6577
+sysVor21                                              -0.7040    0.4946
+                                                      se(coef)      z Pr(>|z|)
+wavelet.HLH_gldm_SmallDependenceHighGrayLevelEmphasis   0.1872 -5.599 2.15e-08
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis              0.1634  3.790 0.000151
+Margin_wavelet.LLH_glszm_ZoneEntropy                    0.1295 -3.234 0.001219
+sysVor21                                                0.2656 -2.650 0.008045
+                                                         
+wavelet.HLH_gldm_SmallDependenceHighGrayLevelEmphasis ***
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis            ***
+Margin_wavelet.LLH_glszm_ZoneEntropy                  ** 
+sysVor21                                              ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                      exp(coef) exp(-coef)
+wavelet.HLH_gldm_SmallDependenceHighGrayLevelEmphasis    0.3506     2.8521
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis               1.8573     0.5384
+Margin_wavelet.LLH_glszm_ZoneEntropy                     0.6577     1.5204
+sysVor21                                                 0.4946     2.0217
+                                                      lower .95 upper .95
+wavelet.HLH_gldm_SmallDependenceHighGrayLevelEmphasis    0.2429    0.5060
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis               1.3484    2.5581
+Margin_wavelet.LLH_glszm_ZoneEntropy                     0.5102    0.8478
+sysVor21                                                 0.2939    0.8325
+
+Concordance= 0.782  (se = 0.031 )
+Likelihood ratio test= 63.42  on 4 df,   p=6e-13
+Wald test            = 56.79  on 4 df,   p=1e-11
+Score (logrank) test = 62.53  on 4 df,   p=9e-13
+
+Train accuracy: 0.782332845290385
+Test accuracy: 0.536644951140065
+Train accuracy inner loops: 0.774085424248228, 0.810142367245142, 0.7780617460642, 0.742837257858717, 0.80624725032996, 0.757022840640588, 0.779711937792701, 0.798343643983237, 0.784073082956538, 0.810122006326254, 0.799024058102587, 0.775616915879277, 0.74942597584107, 0.749110833413438, 0.80236193122612, 0.782931829830856, 0.752079174983367, 0.783549783549784, 0.761747050300145, 0.801107521919705, 0.799392911347201, 0.766737325560855, 0.805536734101249, 0.76303317535545, 0.779090830673682, 0.800840728631481, 0.787156409632693, 0.792204568023833, 0.805838869654721, 0.773974814336455
+Test accuracy inner loops: 0.797432239657632, 0.711327649208283, 0.744525547445255, 0.846026490066225, 0.615925058548009, 0.705838876570584, 0.763636363636364, 0.701044386422977, 0.759398496240602, 0.728260869565217, 0.714285714285714, 0.834829443447038, 0.899463806970509, 0.878571428571429, 0.621409921671018, 0.771356783919598, 0.964516129032258, 0.640117994100295, 0.835038363171355, 0.682978723404255, 0.681159420289855, 0.860986547085202, 0.613827993254637, 0.915194346289753, 0.778280542986425, 0.682456140350877, 0.765799256505576, 0.747636363636364, 0.717314487632509, 0.833910034602076
+############################
+############################
+############################
+Fold 28 eventRatio in train set 0.171270718232044
+Fold 28 eventRatio in test set 0.0645161290322581
+Ids with event in test set:  Z38, Z42, Z42, Z47, K19, K60, K60, K68, K68, K68
+Model Fold 28
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 362, number of events= 62 
+
+                                              coef exp(coef) se(coef)      z
+Margin_wavelet.LLH_glcm_ClusterProminence  -0.7649    0.4654   0.2465 -3.103
+sysVor11                                    1.1492    3.1557   0.2712  4.237
+ageClass                                   -0.3149    0.7299   0.1186 -2.655
+Margin_wavelet.HHL_firstorder_10Percentile  0.4093    1.5057   0.1499  2.731
+                                           Pr(>|z|)    
+Margin_wavelet.LLH_glcm_ClusterProminence   0.00191 ** 
+sysVor11                                   2.26e-05 ***
+ageClass                                    0.00792 ** 
+Margin_wavelet.HHL_firstorder_10Percentile  0.00631 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                           exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_ClusterProminence     0.4654     2.1487    0.2871
+sysVor11                                      3.1557     0.3169    1.8546
+ageClass                                      0.7299     1.3701    0.5785
+Margin_wavelet.HHL_firstorder_10Percentile    1.5057     0.6641    1.1225
+                                           upper .95
+Margin_wavelet.LLH_glcm_ClusterProminence     0.7544
+sysVor11                                      5.3698
+ageClass                                      0.9208
+Margin_wavelet.HHL_firstorder_10Percentile    2.0198
+
+Concordance= 0.777  (se = 0.027 )
+Likelihood ratio test= 56.29  on 4 df,   p=2e-11
+Wald test            = 53.42  on 4 df,   p=7e-11
+Score (logrank) test = 60.71  on 4 df,   p=2e-12
+
+Train accuracy: 0.776562120106978
+Test accuracy: 0.599326599326599
+Train accuracy inner loops: 0.755107832009081, 0.777566389219184, 0.767867244955685, 0.783948526921775, 0.778005525354246, 0.773916292974589, 0.754074824761422, 0.767598764428548, 0.820809830781628, 0.751589464123524, 0.801355869242199, 0.793083573487032, 0.748209906817067, 0.777206051762537, 0.803927068723703, 0.756330833605043, 0.798493208828523, 0.828314075152397, 0.833089025701163, 0.765745075523364, 0.784447935368043, 0.803717935403469, 0.789858053898375, 0.78334172118772, 0.738213107024988, 0.792737009455276, 0.759165256627186, 0.779851746003394, 0.785462805224304, 0.797008547008547
+Test accuracy inner loops: 0.771666666666667, 0.725925925925926, 0.777038269550749, 0.809876543209877, 0.731075697211155, 0.833052276559865, 0.947368421052632, 0.882352941176471, 0.589974293059126, 0.914, 0.666666666666667, 0.708588957055215, 0.85273492286115, 0.824324324324324, 0.630165289256198, 0.867057673509286, 0.73093220338983, 0.615520282186949, 0.625550660792952, 0.739255014326648, 0.763470319634703, 0.62691466083151, 0.736725663716814, 0.79375, 0.871727748691099, 0.737463126843658, 0.820846905537459, 0.795275590551181, 0.620689655172414, 0.711397058823529
+############################
+############################
+############################
+Fold 29 eventRatio in train set 0.148148148148148
+Fold 29 eventRatio in test set 0.0941176470588235
+Ids with event in test set:  A02, L31, Z39, Z39, Z43, Z43, K70, M08
+Model Fold 29
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 432, number of events= 64 
+
+                                                         coef exp(coef)
+Margin_wavelet.LLH_glcm_Correlation                   -0.7966    0.4508
+original_gldm_SmallDependenceLowGrayLevelEmphasis     -0.9508    0.3864
+ageClass                                              -0.3215    0.7251
+Margin_wavelet.HHL_glrlm_LongRunHighGrayLevelEmphasis  0.2511    1.2854
+                                                      se(coef)      z Pr(>|z|)
+Margin_wavelet.LLH_glcm_Correlation                     0.1498 -5.319 1.04e-07
+original_gldm_SmallDependenceLowGrayLevelEmphasis       0.2848 -3.339 0.000842
+ageClass                                                0.1150 -2.796 0.005181
+Margin_wavelet.HHL_glrlm_LongRunHighGrayLevelEmphasis   0.1175  2.137 0.032580
+                                                         
+Margin_wavelet.LLH_glcm_Correlation                   ***
+original_gldm_SmallDependenceLowGrayLevelEmphasis     ***
+ageClass                                              ** 
+Margin_wavelet.HHL_glrlm_LongRunHighGrayLevelEmphasis *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                      exp(coef) exp(-coef)
+Margin_wavelet.LLH_glcm_Correlation                      0.4508      2.218
+original_gldm_SmallDependenceLowGrayLevelEmphasis        0.3864      2.588
+ageClass                                                 0.7251      1.379
+Margin_wavelet.HHL_glrlm_LongRunHighGrayLevelEmphasis    1.2854      0.778
+                                                      lower .95 upper .95
+Margin_wavelet.LLH_glcm_Correlation                      0.3362    0.6046
+original_gldm_SmallDependenceLowGrayLevelEmphasis        0.2211    0.6753
+ageClass                                                 0.5788    0.9084
+Margin_wavelet.HHL_glrlm_LongRunHighGrayLevelEmphasis    1.0210    1.6182
+
+Concordance= 0.767  (se = 0.028 )
+Likelihood ratio test= 57.8  on 4 df,   p=8e-12
+Wald test            = 49.33  on 4 df,   p=5e-10
+Score (logrank) test = 52.48  on 4 df,   p=1e-10
+
+Train accuracy: 0.766702613875623
+Test accuracy: 0.559414990859232
+Train accuracy inner loops: 0.727309301577084, 0.753835840905705, 0.778087150215787, 0.758370591157476, 0.756904681711014, 0.753036437246964, 0.758494604476946, 0.784729586426299, 0.770819672131148, 0.774730084622118, 0.74018629407851, 0.75016694490818, 0.768377922390937, 0.739802880970432, 0.753432447802421, 0.806209179565178, 0.781751774515885, 0.757752533005834, 0.747479924824876, 0.779888785912882, 0.76727606409261, 0.762524352908433, 0.747292095604691, 0.771859367293736, 0.752865180245885, 0.738455772113943, 0.780060652009098, 0.740179875470828, 0.754042426939623, 0.739904988123515
+Test accuracy inner loops: 0.908479138627187, 0.833652007648183, 0.700956937799043, 0.780469897209985, 0.808219178082192, 0.809711286089239, 0.77929465301479, 0.621026894865526, 0.733990147783251, 0.739454094292804, 0.805780346820809, 0.766749379652605, 0.791314837153197, 0.806841046277666, 0.767038413878563, 0.624034334763949, 0.644776119402985, 0.855102040816327, 0.821681864235056, 0.62671905697446, 0.809178743961353, 0.787798408488064, 0.813773035887488, 0.758793969849246, 0.863270777479893, 0.911870503597122, 0.729349736379613, 0.838206627680312, 0.845213849287169, 0.806318681318681
+############################
+############################
+############################
+Fold 30 eventRatio in train set 0.147887323943662
+Fold 30 eventRatio in test set 0.0989010989010989
+Ids with event in test set:  A02, A05, A05, A23, A23, L31, Z50, K60, K60
+Model Fold 30
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 426, number of events= 63 
+
+                                           coef exp(coef) se(coef)      z
+gender1                                 -1.0946    0.3347   0.2621 -4.177
+Margin_wavelet.LLH_glcm_ClusterTendency -0.7317    0.4811   0.1732 -4.226
+Margin_wavelet.HHH_firstorder_Skewness   0.2154    1.2403   0.1127  1.911
+ageClass                                -0.2290    0.7953   0.1124 -2.038
+                                        Pr(>|z|)    
+gender1                                 2.96e-05 ***
+Margin_wavelet.LLH_glcm_ClusterTendency 2.38e-05 ***
+Margin_wavelet.HHH_firstorder_Skewness    0.0560 .  
+ageClass                                  0.0416 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                        exp(coef) exp(-coef) lower .95
+gender1                                    0.3347     2.9881    0.2002
+Margin_wavelet.LLH_glcm_ClusterTendency    0.4811     2.0787    0.3426
+Margin_wavelet.HHH_firstorder_Skewness     1.2403     0.8062    0.9945
+ageClass                                   0.7953     1.2573    0.6381
+                                        upper .95
+gender1                                    0.5594
+Margin_wavelet.LLH_glcm_ClusterTendency    0.6755
+Margin_wavelet.HHH_firstorder_Skewness     1.5469
+ageClass                                   0.9913
+
+Concordance= 0.761  (se = 0.03 )
+Likelihood ratio test= 51.73  on 4 df,   p=2e-10
+Wald test            = 48.47  on 4 df,   p=8e-10
+Score (logrank) test = 51.44  on 4 df,   p=2e-10
+
+Train accuracy: 0.760731597621308
+Test accuracy: 0.569651741293532
+Train accuracy inner loops: 0.779891304347826, 0.760082198818392, 0.743705616526791, 0.76940547762191, 0.76, 0.794262532599247, 0.750276895813335, 0.756060501415844, 0.775864779874214, 0.743360805860806, 0.742926496245164, 0.721589355691242, 0.73064671457145, 0.766650792570923, 0.753755984810963, 0.70947691314175, 0.727272727272727, 0.736517719568567, 0.737558685446009, 0.7298972887943, 0.75441632417622, 0.738593974175036, 0.736242018850714, 0.791917621915679, 0.82661159701976, 0.767510427153747, 0.733877374160468, 0.736405810327782, 0.744867101703008, 0.79582875960483
+Test accuracy inner loops: 0.704809286898839, 0.746192893401015, 0.885185185185185, 0.677685950413223, 0.747448979591837, 0.544464609800363, 0.832236842105263, 0.82620320855615, 0.703658536585366, 0.83208395802099, 0.841584158415842, 0.837879968823071, 0.875776397515528, 0.748373101952278, 0.773863636363636, 0.928338762214984, 0.863436123348018, 0.807174887892377, 0.850267379679144, 0.82761087267525, 0.737967914438503, 0.883399209486166, 0.884943181818182, 0.639103013314646, 0.599051008303677, 0.712301587301587, 0.866028708133971, 0.851851851851852, 0.796252927400468, 0.569911504424779

@@ -1,0 +1,8 @@
+./ClinicalModels/resultsFinalModel//bestModels.rds
+Number of Models 1
+############################
+############################
+############################
+sysVor21 0.571269967869551 +/- NA in 1 of 1
+sysWaehrend11 2.57955002712269 +/- NA in 1 of 1
+gender1 0.356020330055079 +/- NA in 1 of 1

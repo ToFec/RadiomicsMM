@@ -1,0 +1,9 @@
+./CombinedModels/resultsFinalModel//bestModels.rds
+Number of Models 1
+############################
+############################
+############################
+wavelet.LLH_firstorder_Range 1.46625310686962 +/- NA in 1 of 1
+sysWaehrend11 2.51888636539041 +/- NA in 1 of 1
+gender1 0.318115772221717 +/- NA in 1 of 1
+Max.Gy. 0.803572607917353 +/- NA in 1 of 1

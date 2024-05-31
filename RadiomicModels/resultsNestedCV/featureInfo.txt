@@ -1,0 +1,58 @@
+/home/fechter/workspace/rscripts2ForGithub/RadiomicModels/resultsNestedCV/bestModels.rds
+Number of Models 30
+############################
+############################
+############################
+Margin_wavelet.LHL_gldm_SmallDependenceLowGrayLevelEmphasis 0.338396050666567 +/- NA in 1 of 30
+Margin_wavelet.LLH_glszm_ZoneEntropy 0.633204691743113 +/- 0.0711499078694783 in 2 of 30
+Margin_wavelet.HHL_firstorder_Median 1.39577616041687 +/- 0.130302943373017 in 4 of 30
+Margin_wavelet.LLL_gldm_LowGrayLevelEmphasis 0.63531823189125 +/- NA in 1 of 30
+Margin_wavelet.LLH_glcm_Correlation 0.522019565340232 +/- 0.0545350180979797 in 21 of 30
+original_gldm_SmallDependenceLowGrayLevelEmphasis 0.468413325597477 +/- 0.00936616988857478 in 4 of 30
+Margin_wavelet.HLH_firstorder_Skewness 0.66645136736518 +/- 0.0147905193436382 in 3 of 30
+wavelet.LHH_glszm_SmallAreaHighGrayLevelEmphasis 0.625608111193951 +/- 0.0650738922693804 in 6 of 30
+Margin_wavelet.HLL_gldm_SmallDependenceHighGrayLevelEmphasis 0.673542597882434 +/- NA in 1 of 30
+wavelet.LLL_gldm_SmallDependenceLowGrayLevelEmphasis 0.44947433736765 +/- NA in 1 of 30
+wavelet.LHH_firstorder_Skewness 1.33745584709983 +/- 0.029988398685892 in 2 of 30
+Margin_original_glcm_SumSquares 0.437369665456112 +/- 0.0975268730660814 in 3 of 30
+Margin_wavelet.HLH_glszm_SmallAreaEmphasis 1.77315565968234 +/- 0.147831839276577 in 5 of 30
+wavelet.LLH_glcm_Correlation 0.632238561665433 +/- 0.0767241598564179 in 3 of 30
+original_glcm_SumSquares 0.529603851165729 +/- 0.00740471461646155 in 2 of 30
+Margin_wavelet.HHL_glrlm_ShortRunLowGrayLevelEmphasis 0.574569225058479 +/- 0.0345938497253621 in 4 of 30
+Margin_wavelet.HHL_glcm_Imc1 1.93108508391927 +/- NA in 1 of 30
+wavelet.HHL_firstorder_Skewness 1.472955501791 +/- NA in 1 of 30
+wavelet.HHH_firstorder_Mean 0.763016165646634 +/- 0.0331197619031523 in 4 of 30
+Margin_wavelet.LLH_glcm_ClusterTendency 0.509082149473816 +/- 0.0367638948166771 in 3 of 30
+Margin_wavelet.HLH_glcm_ClusterShade 0.673188840248691 +/- 0.0516079002348448 in 4 of 30
+Margin_wavelet.HHH_glcm_ClusterProminence 0.550291607231594 +/- 0.0698403292416013 in 2 of 30
+wavelet.HHL_glrlm_ShortRunHighGrayLevelEmphasis 0.660480138854586 +/- NA in 1 of 30
+Margin_wavelet.HHH_glcm_Contrast 0.591942564864029 +/- NA in 1 of 30
+Margin_wavelet.LHH_glszm_SizeZoneNonUniformityNormalized 0.672773592592115 +/- 0.011168121570923 in 2 of 30
+Margin_wavelet.HHH_firstorder_Skewness 1.25146641611732 +/- 0.0588293204314187 in 2 of 30
+Margin_wavelet.HHL_firstorder_InterquartileRange 0.616802810720213 +/- NA in 1 of 30
+Margin_wavelet.LLH_glcm_SumSquares 0.543087041830717 +/- NA in 1 of 30
+wavelet.LLH_gldm_GrayLevelVariance 0.492717392283836 +/- NA in 1 of 30
+Margin_original_glcm_SumEntropy 0.676680773861516 +/- NA in 1 of 30
+Margin_wavelet.LHH_glszm_SmallAreaEmphasis 0.797006838964668 +/- NA in 1 of 30
+Margin_wavelet.HLL_glcm_Idmn 2.16846452781167 +/- NA in 1 of 30
+original_glszm_SmallAreaLowGrayLevelEmphasis 0.530834496866268 +/- NA in 1 of 30
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis 0.722323374721147 +/- 0.0255385378537648 in 4 of 30
+Margin_wavelet.LHL_glszm_SizeZoneNonUniformityNormalized 0.579673501102015 +/- NA in 1 of 30
+Margin_wavelet.LLH_glszm_SmallAreaHighGrayLevelEmphasis 1.34576061891688 +/- NA in 1 of 30
+Margin_wavelet.HHH_glcm_DifferenceAverage 0.566344570161189 +/- NA in 1 of 30
+Margin_wavelet.HLL_glcm_SumSquares 0.6662701652361 +/- NA in 1 of 30
+Margin_wavelet.LHL_glrlm_ShortRunLowGrayLevelEmphasis 0.411930084762822 +/- NA in 1 of 30
+wavelet.LHL_gldm_LargeDependenceLowGrayLevelEmphasis 0.282663567425349 +/- NA in 1 of 30
+Margin_original_firstorder_Median 0.753114017105283 +/- NA in 1 of 30
+wavelet.LLH_firstorder_Minimum 0.745987314109254 +/- NA in 1 of 30
+Margin_original_glcm_DifferenceAverage 0.574671167035626 +/- NA in 1 of 30
+Margin_wavelet.LLH_glcm_ClusterProminence 0.540135320610111 +/- NA in 1 of 30
+Margin_wavelet.HLL_glcm_ClusterProminence 0.527348297114679 +/- NA in 1 of 30
+wavelet.LHH_glrlm_ShortRunHighGrayLevelEmphasis 0.68160361736111 +/- NA in 1 of 30
+Margin_wavelet.LHH_glcm_ClusterShade 0.786755275151729 +/- NA in 1 of 30
+wavelet.LLH_glcm_ClusterTendency 0.410385579285407 +/- NA in 1 of 30
+wavelet.HLH_firstorder_Maximum 1.48974765360467 +/- NA in 1 of 30
+Margin_wavelet.LLH_glcm_Imc2 0.685296532470121 +/- NA in 1 of 30
+Margin_wavelet.HHL_firstorder_10Percentile 1.65260637990995 +/- NA in 1 of 30
+Margin_wavelet.LLH_glcm_Contrast 0.624763319990778 +/- NA in 1 of 30
+wavelet.HLH_firstorder_Kurtosis 1.28233050353606 +/- NA in 1 of 30

@@ -1,0 +1,45 @@
+/home/fechter/workspace/rscripts2ForGithub/RadiomicModels/resultsFinalModel
+mean tesetaccuracy: 0.754436432921134 +/- NA
+0.754436432921134
+############################
+############################
+############################
+Model Fold 1
+Call:
+coxph(formula = as.formula(self$getFormulaString()), data = trainData)
+
+  n= 517, number of events= 72 
+
+                                                   coef exp(coef) se(coef)
+Margin_wavelet.LLH_glcm_ClusterProminence       -0.7064    0.4934   0.2183
+Margin_wavelet.LLH_glcm_Correlation             -0.5090    0.6011   0.1364
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis -0.3182    0.7274   0.1305
+Margin_wavelet.HLH_glcm_ClusterShade            -0.3160    0.7291   0.1401
+                                                     z Pr(>|z|)    
+Margin_wavelet.LLH_glcm_ClusterProminence       -3.235 0.001216 ** 
+Margin_wavelet.LLH_glcm_Correlation             -3.731 0.000191 ***
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis -2.438 0.014764 *  
+Margin_wavelet.HLH_glcm_ClusterShade            -2.256 0.024069 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+                                                exp(coef) exp(-coef) lower .95
+Margin_wavelet.LLH_glcm_ClusterProminence          0.4934      2.027    0.3216
+Margin_wavelet.LLH_glcm_Correlation                0.6011      1.664    0.4601
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis    0.7274      1.375    0.5632
+Margin_wavelet.HLH_glcm_ClusterShade               0.7291      1.372    0.5541
+                                                upper .95
+Margin_wavelet.LLH_glcm_ClusterProminence          0.7570
+Margin_wavelet.LLH_glcm_Correlation                0.7854
+wavelet.HLH_glrlm_ShortRunHighGrayLevelEmphasis    0.9395
+Margin_wavelet.HLH_glcm_ClusterShade               0.9594
+
+Concordance= 0.754  (se = 0.027 )
+Likelihood ratio test= 49.18  on 4 df,   p=5e-10
+Wald test            = 37.1  on 4 df,   p=2e-07
+Score (logrank) test = 38.36  on 4 df,   p=9e-08
+
+Train accuracy: 0.754436432921134
+Test accuracy: 0
+Train accuracy inner loops: 0.753063497957668, 0.80421822272216, 0.780962921970116, 0.729766885833831, 0.733386201427439, 0.739358637905652, 0.749515972894482, 0.756059714270426, 0.792229825255895, 0.768464961067853, 0.734731444349484, 0.771011025587685, 0.693720947391721, 0.735885755233659, 0.756816623595802, 0.741460357254779, 0.741476144550973, 0.748286340187973, 0.75375438229292, 0.790130524387451, 0.786447874232601, 0.740227610094013, 0.764309244389541, 0.742743845348901, 0.780770649939381, 0.685396423039009, 0.763825746676642, 0.743035321780913, 0.752091053467443, 0.781524456695942
+Test accuracy inner loops: 0.767004341534009, 0.514705882352941, 0.628640776699029, 0.773674242424242, 0.819444444444444, 0.78045515394913, 0.74061433447099, 0.744186046511628, 0.56153050672182, 0.724418604651163, 0.751552795031056, 0.645264847512038, 0.842055185537583, 0.790927021696253, 0.735583684950774, 0.782046256370051, 0.829268292682927, 0.748014440433213, 0.756137479541735, 0.62058526740666, 0.619914346895075, 0.811652035115722, 0.674650698602794, 0.854190585533869, 0.599374021909233, 0.89073050951504, 0.691370558375635, 0.802303262955854, 0.801242236024845, 0.684696569920844
