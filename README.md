@@ -1,4 +1,4 @@
-# RadiomicsMM
+# Analysis of clinical, dosimetric and radiomic features for predicting local failure after stereotactic radiotherapy of brain metastases in malignant melanoma
 
 This repository contains code, models and radiomic features used for the paper "Analysis of clinical, dosimetric and radiomic features for predicting local failure after stereotactic radiotherapy of brain metastases in malignant melanoma". The preprint version of the paper is available here: https://arxiv.org/abs/2405.20825
 
